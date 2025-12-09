@@ -4,21 +4,45 @@ import Layout from '~/layouts/PageLayout.astro';
 const metadata = {
   title: 'Contact — The Second Design',
   description:
-    'Tell us about your learners, your context, and what you want to make possible. We’ll review it and reply with next steps for a short inquiry call.',
+    'Tell us about your learners, your context, and what you want to make possible. You can either send us a detailed note or book a 30-minute inquiry call.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero -->
   <section class="bg-slate-50 border-b border-slate-200 dark:bg-slate-950 dark:border-slate-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center space-y-4">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-20 text-center space-y-6">
       <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900 dark:text-white">
         Contact
       </h1>
       <p class="text-lg sm:text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto">
-        Tell us a bit about your learners, your context, and what you want to make possible.
-        We’ll review it and get back with next steps for a short inquiry call.
+        There are two simple ways to start working with us:
+        send a detailed message, or book a 30-minute inquiry call.
       </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+        <a
+          href="https://cal.com/the-second-design/30min"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold
+                 bg-slate-900 text-slate-50 shadow-sm hover:bg-slate-800
+                 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
+                 transition"
+        >
+          Book a 30-minute inquiry call
+        </a>
+
+        <a
+          href="#contact-form"
+          class="inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold
+                 border border-slate-300 text-slate-800 bg-white/80 hover:bg-white
+                 dark:border-slate-700 dark:text-slate-100 dark:bg-slate-900/60 dark:hover:bg-slate-900
+                 transition"
+        >
+          Send us a message instead
+        </a>
+      </div>
     </div>
   </section>
 
@@ -27,31 +51,65 @@ const metadata = {
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-20">
       <div class="grid gap-12 md:grid-cols-2 items-start">
 
-        <!-- Left: guidance text -->
-        <div class="space-y-6 text-slate-900 dark:text-slate-200">
-          <h2 class="text-2xl font-semibold">
-            How we like to use this form
-          </h2>
+        <!-- Left: guidance + call option -->
+        <div class="space-y-8 text-slate-900 dark:text-slate-200">
+          <div class="space-y-3">
+            <h2 class="text-2xl font-semibold">
+              How we like to use this page
+            </h2>
 
-          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-            Use this to start a conversation about:
-          </p>
+            <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              Use this page to start a conversation about:
+            </p>
 
-          <ul class="space-y-2 text-sm text-slate-800 dark:text-slate-200">
-            <li>• Designing a new learning program for your organisation</li>
-            <li>• Running Real World Ready with your students or community</li>
-            <li>• Reviewing or improving an existing program</li>
-          </ul>
+            <ul class="space-y-2 text-sm text-slate-800 dark:text-slate-200">
+              <li>• Designing a new learning program for your organisation</li>
+              <li>• Running Real World Ready with your students or community</li>
+              <li>• Reviewing or improving an existing program</li>
+              <li>• Exploring a one-off pilot or experiment</li>
+            </ul>
 
-          <p class="text-xs text-slate-500 dark:text-slate-500 leading-relaxed max-w-md">
-            If you’re not sure how to describe what you need, that’s fine.
-            Write in plain language. We care more about understanding your reality
-            than getting a “perfect brief”.
-          </p>
+            <p class="text-xs text-slate-500 dark:text-slate-500 leading-relaxed max-w-md">
+              If you’re not sure how to describe what you need, that’s fine.
+              Write in plain language. We care more about understanding your reality
+              than getting a “perfect brief”.
+            </p>
+          </div>
+
+          <!-- Call booking card -->
+          <div
+            class="rounded-2xl border bg-slate-50/80 text-slate-900 px-5 py-4 space-y-3
+                   border-slate-200
+                   dark:bg-slate-900/70 dark:border-slate-800 dark:text-slate-50"
+          >
+            <h3 class="text-sm font-semibold tracking-tight">
+              Prefer to talk live?
+            </h3>
+            <p class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+              You can skip the back-and-forth and book a
+              <span class="font-medium">30-minute inquiry call</span> with us.
+              We’ll use it to understand your learners, constraints, and what you’re trying to make possible.
+            </p>
+            <a
+              href="https://cal.com/the-second-design/30min"
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-xs font-semibold
+                     bg-slate-900 text-slate-50 hover:bg-slate-800
+                     dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
+                     transition"
+            >
+              Book a 30-minute call
+            </a>
+            <p class="text-[11px] text-slate-500 dark:text-slate-500 leading-relaxed">
+              If there’s no obvious fit, we’ll say so clearly and point you to other options if we can.
+            </p>
+          </div>
         </div>
 
         <!-- Right: form card -->
         <div
+          id="contact-form"
           class="rounded-3xl border bg-white text-slate-900 shadow-xl p-6 sm:p-8
                  border-slate-200 shadow-slate-200/80
                  dark:bg-slate-900 dark:text-slate-50 dark:border-slate-800 dark:shadow-black/60"
@@ -163,8 +221,8 @@ const metadata = {
             </div>
 
             <p class="text-[11px] text-slate-500 dark:text-slate-500 leading-relaxed pt-1">
-              We read every message. If it’s not a fit, we’ll say so clearly.
-              If it is, we’ll propose a short call to understand the context better.
+              We read every message. If it makes sense to speak live, we’ll reply with a link to this same
+              30-minute call — or suggest a different next step if that’s more useful.
             </p>
           </form>
         </div>

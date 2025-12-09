@@ -13,8 +13,16 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import TestimonialsSection from '~/components/TestimonialsSection.astro';
 
+// Brand logos (local assets)
+import mcdonaldsLogo from '~/assets/logos/mcdonalds.svg';
+import imgAcademyLogo from '~/assets/logos/img-academy.svg';
+import glovoLogo from '~/assets/logos/glovo.svg';
+import graphyLogo from '~/assets/logos/graphy.svg';
+import fossUnitedLogo from '~/assets/logos/foss-united.svg';
+import tinkerhubLogo from '~/assets/logos/tinkerhub.svg';
+
 const metadata = {
-  title: 'The Second Design — Learning experiences that change people',
+  title: 'The Second Design — Learning experiences that transform people',
   description:
     'The Second Design is an education design studio. We work with organisations, colleges, and nonprofits to turn their expertise into real-world learning experiences that students and teams actually remember and use.',
   ignoreTitleTemplate: true,
@@ -38,12 +46,12 @@ const metadata = {
   >
     <Fragment slot="title">
       We design <span class="hidden xl:inline">learning experiences that</span>
-      <span class="text-accent dark:text-white"> change people.</span>
+      <span class="text-accent dark:text-white"> transform people.</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline text-slate-700 dark:text-slate-300">
-        The Second Design is an education design studio. We work with organisations, colleges, and nonprofits
+        The Second Design is an Education Design Studio. We work with businesses, colleges, and nonprofits
         to turn their expertise into practical, real-world learning experiences.
       </span>
 
@@ -52,7 +60,6 @@ const metadata = {
       </span>
 
       <span class="text-slate-700 dark:text-slate-300">
-        Programs that build agency, clarity, and real-world skills learners actually remember and use.
       </span>
     </Fragment>
   </Hero>
@@ -60,7 +67,102 @@ const metadata = {
   <!-- NOTE -->
   <Note
     title="What we do"
-    description="We help organisations design powerful learning environments — for employees, students, and communities. You bring the domain expertise. We bring the pedagogy, structure, and learner experience."
+    description="We help organisations design powerful learning environments - for employees, students, and communities. You bring the domain expertise. We bring the pedagogy, structure, and learner experience."
+  />
+
+    <!-- BRANDS STRIP: Trusted by professionals -->
+<section class="py-12 bg-white dark:bg-slate-950">
+  <div class="container mx-auto text-center space-y-6">
+    <p class="text-sm font-semibold tracking-wide text-slate-500 dark:text-slate-400 uppercase">
+      Trusted by professionals from
+    </p>
+
+    <div class="flex flex-wrap justify-center items-center gap-10 opacity-90 dark:opacity-95">
+
+      <img
+        src="/logos/mcdonalds.png"
+        alt="McDonald's"
+        class="h-16 w-auto object-contain"
+      />
+
+      <img
+        src="/logos/img-academy.jpeg"
+        alt="IMG Academy"
+        class="h-16 w-auto object-contain"
+      />
+
+      <img
+        src="/logos/glovo.svg"
+        alt="Glovo"
+        class="h-16 w-auto object-contain"
+      />
+
+      <img
+        src="/logos/graphy.jpeg"
+        alt="Graphy by Unacademy"
+        class="h-16 w-auto object-contain"
+      />
+
+      <img
+        src="/logos/foss.png"
+        alt="FOSS United"
+        class="h-16 w-auto object-contain"
+      />
+
+      <img
+        src="/logos/tinkerhub.png"
+        alt="TinkerHub"
+        class="h-16 w-auto object-contain"
+      />
+
+    </div>
+  </div>
+</section>
+
+  <!-- FEATURES: Who we design for -->
+  <Features
+    id="features"
+    tagline="Who we design for"
+    title="Designing real-world learning environments"
+    subtitle="From rapid diagnostics to full curriculum builds, we help translate expertise into programs that create measurable change."
+    items={[
+      {
+        title: 'Businesses',
+        description:
+          'Customer education, internal academies, onboarding journeys, and capability-building tracks for teams.',
+        icon: 'tabler:building-community',
+      },
+      {
+        title: 'NGOs & Foundations',
+        description:
+          'Programs for youth, fellows, volunteers, and communities where pedagogy and impact both matter.',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'Colleges & Campus Programs',
+        description:
+          'Finishing-school style programs like Real World Ready that run alongside degrees and build real-world skills.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Open communities',
+        description:
+          'Adaptations for developer and open-source communities, aligned with real events, hackathons, and initiatives.',
+        icon: 'tabler:brand-github',
+      },
+      {
+        title: 'Program reviews & audits',
+        description:
+          'Deep dives into existing programs with recommendations to improve engagement, outcomes, and learner experience.',
+        icon: 'tabler:zoom-in',
+      },
+      {
+        title: 'Pilots & experiments',
+        description:
+          'Short, well-designed pilots to quickly test ideas before committing to full multi-module builds.',
+        icon: 'tabler:flask',
+      },
+    ]}
   />
 
   <!-- FEATURED VIDEO TESTIMONIALS -->
@@ -71,23 +173,7 @@ const metadata = {
       'rahul-foss-video-2025',
       'rik-designacbc-video-2022',
       'matias-edison-consulting-2022',
-      'alejandro-edison-consulting-2022'
-    ]}
-  />
-  
-  <!-- FEATURES: Who we design for -->
-  <Features
-    id="features"
-    tagline="Who we design for"
-    title="Designing real-world learning environments"
-    subtitle="From rapid diagnostics to full curriculum builds, we help translate expertise into programs that create measurable change."
-    items={[
-      { title: 'Businesses', description: 'Customer education, internal academies, onboarding journeys, and capability-building tracks for teams.', icon: 'tabler:building-community' },
-      { title: 'NGOs & Foundations', description: 'Programs for youth, fellows, volunteers, and communities where pedagogy and impact both matter.', icon: 'tabler:users' },
-      { title: 'Colleges & Campus Programs', description: 'Finishing-school style programs like Real World Ready that run alongside degrees and build real-world skills.', icon: 'tabler:school' },
-      { title: 'Open communities', description: 'Adaptations for developer and open-source communities, aligned with real events, hackathons, and initiatives.', icon: 'tabler:brand-github' },
-      { title: 'Program reviews & audits', description: 'Deep dives into existing programs with recommendations to improve engagement, outcomes, and learner experience.', icon: 'tabler:zoom-in' },
-      { title: 'Pilots & experiments', description: 'Short, well-designed pilots to quickly test ideas before committing to full multi-module builds.', icon: 'tabler:flask' },
+      'alejandro-edison-consulting-2022',
     ]}
   />
 
@@ -97,9 +183,21 @@ const metadata = {
     tagline="Consulting"
     title="From “we should teach this” to a program that actually works"
     items={[
-      { title: 'Clarity on learners & outcomes', description: 'We start with your learners’ reality, constraints, and goals — not a pre-baked curriculum template.' },
-      { title: 'Structure that scales', description: 'We design sessions, activities, and facilitator guides so your team can run the program repeatedly.' },
-      { title: 'Evidence from real cohorts', description: 'Programs are tested with real participants, iterated based on feedback, and made better with every run.' },
+      {
+        title: 'Clarity on learners & outcomes',
+        description:
+          'We start with your learners’ reality, constraints, and goals — not a pre-baked curriculum template.',
+      },
+      {
+        title: 'Structure that scales',
+        description:
+          'We design sessions, activities, and facilitator guides so your team can run the program repeatedly.',
+      },
+      {
+        title: 'Evidence from real cohorts',
+        description:
+          'Programs are tested with real participants, iterated based on feedback, and made better with every run.',
+      },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=2070&q=80',
@@ -125,13 +223,33 @@ const metadata = {
   <Steps
     title="How working with us typically feels"
     items={[
-      { title: 'Step 1: <span class="font-medium">Intro &amp; fit check</span>', description: 'We understand your learners, constraints, and goals — and check if we’re the right people for your problem.', icon: 'tabler:messages' },
-      { title: 'Step 2: <span class="font-medium">Diagnostic sprint</span>', description: 'A short diagnostic phase to clarify the problem, learner profile, and success metrics.', icon: 'tabler:route' },
-      { title: 'Step 3: <span class="font-medium">Design &amp; pilot</span>', description: 'We design the program, run a pilot, and refine the experience using real feedback.', icon: 'tabler:flame' },
-      { title: 'Step 4: <span class="font-medium">Handover &amp; scaling</span>', description: 'We hand over guides and structures so your team can run it repeatedly.', icon: 'tabler:arrow-badge-right' },
+      {
+        title: 'Step 1: <span class="font-medium">Intro &amp; fit check</span>',
+        description:
+          'We understand your learners, constraints, and goals — and check if we’re the right people for your problem.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Diagnostic sprint</span>',
+        description:
+          'A short diagnostic phase to clarify the problem, learner profile, and success metrics.',
+        icon: 'tabler:route',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Design &amp; pilot</span>',
+        description:
+          'We design the program, run a pilot, and refine the experience using real feedback.',
+        icon: 'tabler:flame',
+      },
+      {
+        title: 'Step 4: <span class="font-medium">Handover &amp; scaling</span>',
+        description:
+          'We hand over guides and structures so your team can run it repeatedly.',
+        icon: 'tabler:arrow-badge-right',
+      },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1618005198919-d3d4b5a92eee?auto=format&fit=crop&w=987&q=80',
+      src: 'https://images.unsplash.com/photo-1568219557405-376e23e4f7cf?auto=format&fit=crop&w=987&q=80',
       alt: 'Design process',
     }}
   />
@@ -142,12 +260,41 @@ const metadata = {
     subtitle="The moving pieces we tune so your learners don’t just attend, but actually change."
     tagline="Design ingredients"
     items={[
-      { title: 'Clarity of outcomes', description: 'If learners don’t know what changes for them, nothing else matters.', icon: 'tabler:bulb' },
-      { title: 'Learning environment', description: 'Safety, pacing, activities — not just slides.', icon: 'tabler:users-group' },
-      { title: 'Activities & practice', description: 'Doing beats listening. Always.', icon: 'tabler:checklist' },
-      { title: 'Facilitator experience', description: 'Guides so facilitators can run confidently.', icon: 'tabler:user-star' },
-      { title: 'Feedback loops', description: 'We fold feedback into each new run.', icon: 'tabler:message-dots' },
-      { title: 'Repeatability', description: 'Programs you can run again and again.', icon: 'tabler:repeat' },
+      {
+        title: 'Clarity of outcomes',
+        description: 'If learners don’t know what changes for them, nothing else matters.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Learning environment',
+        description:
+          'Safety, pacing, activities — not just slides.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Activities & practice',
+        description:
+          'Doing beats listening. Always.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Facilitator experience',
+        description:
+          'Guides so facilitators can run confidently.',
+        icon: 'tabler:user-star',
+      },
+      {
+        title: 'Feedback loops',
+        description:
+          'We fold feedback into each new run.',
+        icon: 'tabler:message-dots',
+      },
+      {
+        title: 'Repeatability',
+        description:
+          'Programs you can run again and again.',
+        icon: 'tabler:repeat',
+      },
     ]}
   />
 
@@ -157,13 +304,29 @@ const metadata = {
     tagline="Flagship program"
     title="Real World Ready"
     items={[
-      { title: 'Agency over passive learning', description: 'Students learn to design their own path — not just chase exams.' },
-      { title: 'Systems thinking for life', description: 'Tools to think clearly about careers, projects, uncertainty.' },
-      { title: 'Co-designed with partners', description: 'Built with organisations like TinkerHub and FOSS United.' },
-      { title: 'Adaptable formats', description: 'Multi-session series, finishing school tracks, or event-based bootcamps.' },
+      {
+        title: 'Agency over passive learning',
+        description:
+          'Students learn to design their own path — not just chase exams.',
+      },
+      {
+        title: 'Systems thinking for life',
+        description:
+          'Tools to think clearly about careers, projects, uncertainty.',
+      },
+      {
+        title: 'Co-designed with partners',
+        description:
+          'Built with organisations like TinkerHub and FOSS United.',
+      },
+      {
+        title: 'Adaptable formats',
+        description:
+          'Multi-session series, finishing school tracks, or event-based bootcamps.',
+      },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=2194&q=80',
+      src: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=2194&q=80',
       alt: 'Students collaborating',
     }}
   >
@@ -180,8 +343,6 @@ const metadata = {
     </Fragment>
   </Content>
 
-  
-
   <!-- BLOG -->
   <BlogLatestPosts
     title="From our notebook"
@@ -195,22 +356,46 @@ const metadata = {
     tagline="FAQs"
     classes={{ container: 'max-w-5xl' }}
     items={[
-      { title: 'What kind of organisations do you work with?', description: 'Colleges, NGOs, foundations, startups, and companies — anyone serious about real learning.' },
-      { title: 'Can you run Real World Ready?', description: 'Yes. We co-design formats, adapt to your calendar, and run with your learners as partners.' },
-      { title: 'Do you do one-off workshops?', description: 'Sometimes — but only when they fit into a larger transformation.' },
-      { title: 'Where are you based?', description: 'India. We work with distributed teams internationally.' },
-      { title: 'What does an engagement cost?', description: 'Depends on depth: diagnostics < full builds < multi-cohort programs.' },
-      { title: 'How do we start?', description: 'Send us a short note about your learners and goals. We’ll reply quickly.' },
+      {
+        title: 'What kind of organisations do you work with?',
+        description:
+          'Colleges, NGOs, foundations, startups, and companies — anyone serious about real learning.',
+      },
+      {
+        title: 'Can you run Real World Ready?',
+        description:
+          'Yes. We co-design formats, adapt to your calendar, and run with your learners as partners.',
+      },
+      {
+        title: 'Do you do one-off workshops?',
+        description:
+          'Sometimes — but only when they fit into a larger transformation.',
+      },
+      {
+        title: 'Where are you based?',
+        description:
+          'India. We work with distributed teams internationally.',
+      },
+      {
+        title: 'What does an engagement cost?',
+        description:
+          'Depends on depth: diagnostics < full builds < multi-cohort programs.',
+      },
+      {
+        title: 'How do we start?',
+        description:
+          'Send us a short note about your learners and goals. We’ll reply quickly.',
+      },
     ]}
   />
 
   <!-- STATS -->
   <Stats
     stats={[
-      { title: 'Cohorts taught', amount: '50+' },
+      //{ title: 'Cohorts taught', amount: '5+' },
       { title: 'Learners reached', amount: '1,500+' },
-      { title: 'Partner orgs', amount: '10+' },
-      { title: 'Years in education', amount: '10+' },
+      { title: 'Sessions Conducted', amount: '100+' },
+      { title: 'Years in education', amount: '15+' },
     ]}
   />
 

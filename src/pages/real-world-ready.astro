@@ -83,7 +83,7 @@ const metadata = {
                  dark:bg-slate-950/80 dark:border-slate-800 dark:shadow-black/40"
         >
           <img
-            src="/images/rwr-hero-placeholder.jpg"
+            src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=2070&q=80"
             alt="Students collaborating in a high-energy learning environment."
             class="w-full h-full object-cover"
           />
@@ -92,7 +92,7 @@ const metadata = {
                    from-white/95 to-transparent px-5 pb-4 pt-10 text-left text-xs text-slate-600
                    dark:from-slate-950/90 dark:text-slate-300"
           >
-            Placeholder image · Replace with a photo from one of your Real World Ready / Beyond the Blueprint sessions.
+            Real World Ready
           </figcaption>
         </figure>
       </div>
@@ -347,27 +347,44 @@ const metadata = {
         </p>
       </div>
 
-      <div class="grid gap-10 md:grid-cols-2 text-left">
-        <div
-          class="rounded-2xl p-8 border bg-slate-50
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/60 dark:border-slate-800/70 dark:shadow-black/25 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">
-            Beyond the Blueprint · TinkerHub
+      {/* Featured case study */}
+      <div
+        class="rounded-3xl border bg-slate-50 border-slate-200 shadow-md shadow-slate-200/80
+               dark:bg-slate-900/70 dark:border-slate-800/80 dark:shadow-black/40
+               p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start"
+      >
+        <div class="space-y-3 flex-1">
+          <p class="text-xs font-semibold tracking-[0.22em] text-emerald-600 dark:text-emerald-300 uppercase">
+            Featured case study
+          </p>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-slate-50">
+            Beyond the Blueprint · TinkerHub Foundation
           </h3>
           <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-            A multi-session series for undergraduates across Kerala, co-designed and delivered with TinkerHub
-            Foundation. Students explored how to start, design their own path, work on real projects, and
-            navigate an uncertain future with more calm and control.
+            A multi-session Real World Ready series for undergraduates across Kerala, co-branded with TinkerHub.
+            Students explored agency, shitty first drafts, career design, system thinking, and navigating their future —
+            in rooms that were honest, interactive, and surprisingly vulnerable.
           </p>
           <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc list-inside space-y-1">
-            <li>Multiple cohorts across colleges and campuses</li>
-            <li>Students reporting shifts in confidence, clarity, and initiative</li>
-            <li>Curriculum that evolves each run based on real feedback</li>
+            <li>170+ students in person at Kochi camp, plus multiple online sessions</li>
+            <li>Deep shifts in language, confidence, and how students approach opportunities</li>
+            <li>Documented as a full written case study with videos, screenshots, and student stories</li>
           </ul>
+          <div class="pt-3">
+            <a
+              href="/blog/beyond-the-blueprint"
+              class="inline-flex items-center gap-2 text-sm font-semibold
+                     text-slate-900 hover:text-slate-700
+                     dark:text-slate-50 dark:hover:text-slate-200"
+            >
+              <span>Read the full case study</span>
+              <Icon name="tabler:arrow-right" class="w-4 h-4" />
+            </a>
+          </div>
         </div>
+      </div>
 
+      
         <div
           class="rounded-2xl p-8 border bg-slate-50
                  border-slate-200 shadow-sm shadow-slate-200/80
@@ -419,8 +436,7 @@ const metadata = {
           ></iframe>
         </div>
         <p class="text-xs text-slate-600 dark:text-slate-400 text-left">
-          Video testimonial from a partner organisation on why they chose to work with The Second Design and what
-          Real World Ready brought to their learners.
+          Sai Rahul Poruri, CEO of FOSS United, shares how Real World Ready shaped the way hundreds of students approached the FOSS Hack 2025 hackathon.
         </p>
       </div>
     </div>
