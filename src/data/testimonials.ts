@@ -68,7 +68,7 @@ export type ResolvedTestimonial = RawTestimonial & {
 
 const products = productsData as Product[];
 const partners = partnersData as Partner[];
-const persons = personsData as Person[];
+const persons = personsData as unknown as Person[];
 const rawTestimonials = testimonialsData as RawTestimonial[];
 
 const PRIORITY_ORDER: Record<RawTestimonial['priority'], number> = {

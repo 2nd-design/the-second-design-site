@@ -1,6 +1,5 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { Fragment } from 'astro/jsx-runtime';
 import { getHomePermalink } from '~/utils/permalinks';
 
 export interface Link {
@@ -58,40 +57,36 @@ const socialLinks = [
     </div>
 
     <!-- Secondary links (Terms, Privacy) -->
-    { secondaryLinks.length > 0 && (
+    {secondaryLinks.length > 0 && (
       <div class="flex flex-wrap justify-center gap-4 text-sm text-slate-500 dark:text-slate-400">
-        {
-          secondaryLinks.map(({ text, href }) => (
-            <a
-              href={href}
-              class="hover:text-slate-900 dark:hover:text-white transition"
-              set:html={text}
-            />
-          ))
-        }
+        {secondaryLinks.map(({ text, href }) => (
+          <a
+            href={href}
+            class="hover:text-slate-900 dark:hover:text-white transition"
+            set:html={text}
+          />
+        ))}
       </div>
     )}
 
     <!-- Social Icons -->
     <div class="flex justify-center gap-5">
-      {
-        socialLinks.map(({ ariaLabel, href, icon }) => (
-          <a
-            aria-label={ariaLabel}
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="p-2.5 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300"
-          >
-            <Icon name={icon} class="w-5 h-5" />
-          </a>
-        ))
-      }
+      {socialLinks.map(({ ariaLabel, href, icon }) => (
+        <a
+          aria-label={ariaLabel}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2.5 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300"
+        >
+          <Icon name={icon} class="w-5 h-5" />
+        </a>
+      ))}
     </div>
 
     <!-- Footnote -->
     <div class="text-center text-sm text-slate-500 dark:text-slate-500 pt-6">
-      <Fragment set:html={footNote} />
+      {footNote && <span set:html={footNote} />}
     </div>
 
   </div>
