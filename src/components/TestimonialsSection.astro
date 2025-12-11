@@ -42,12 +42,9 @@ interface Props {
   testimonialIds?: string[];
 }
 
-const { title = 'What partners and learners say', subtitle, testimonialIds = [] } =
-  Astro.props as Props;
+const { title = 'What partners and learners say', subtitle, testimonialIds = [] } = Astro.props as Props;
 
-const allTestimonials = (testimonialsData as Testimonial[]).filter(
-  (t) => t.is_published !== false
-);
+const allTestimonials = (testimonialsData as Testimonial[]).filter((t) => t.is_published !== false);
 
 let selected: Testimonial[];
 
@@ -57,9 +54,7 @@ if (testimonialIds.length > 0) {
     .filter(Boolean) as Testimonial[];
 } else {
   // Fallback: take top 4 hero/high
-  selected = allTestimonials
-    .filter((t) => t.priority === 'hero' || t.priority === 'high')
-    .slice(0, 4);
+  selected = allTestimonials.filter((t) => t.priority === 'hero' || t.priority === 'high').slice(0, 4);
 }
 
 const persons = personsData as Person[];
@@ -81,13 +76,7 @@ function getProductLabel(testimonial: Testimonial): string {
       if (!p) return null;
 
       // Try multiple possible fields so we don't silently fall back
-      return (
-        p.product_name ||
-        p.product_variant_name ||
-        p.brand_label ||
-        p.name ||
-        null
-      );
+      return p.product_name || p.product_variant_name || p.brand_label || p.name || null;
     })
     .filter(Boolean) as string[];
 
@@ -133,63 +122,59 @@ function extractYouTubeId(url: string | null): string | null {
       <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 dark:text-white">
         {title}
       </h2>
-      {subtitle && (
-        <p class="mt-4 text-slate-600 dark:text-slate-300">
-          {subtitle}
-        </p>
-      )}
+      {subtitle && <p class="mt-4 text-slate-600 dark:text-slate-300">{subtitle}</p>}
     </header>
 
     <div class="grid gap-8 md:grid-cols-2">
-      {selected.map((testimonial) => {
-        const person = getPerson(testimonial);
-        const productLabel = getProductLabel(testimonial);
-        const audienceLabel = getAudienceLabel(testimonial, person);
-        const youtubeId = extractYouTubeId(testimonial.source_url);
+      {
+        selected.map((testimonial) => {
+          const person = getPerson(testimonial);
+          const productLabel = getProductLabel(testimonial);
+          const audienceLabel = getAudienceLabel(testimonial, person);
+          const youtubeId = extractYouTubeId(testimonial.source_url);
 
-        return (
-          <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 sm:p-7 flex flex-col gap-4">
-            <div class="text-xs font-semibold tracking-wide text-blue-600 dark:text-blue-400 uppercase">
-              {productLabel}
-            </div>
-
-            <p class="text-base sm:text-lg text-slate-800 dark:text-slate-100 leading-relaxed">
-              “{testimonial.quote_short}”
-            </p>
-
-            {youtubeId && (
-              <div class="mt-2 aspect-video rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
-                <iframe
-                  src={`https://www.youtube.com/embed/${youtubeId}`}
-                  title="Video testimonial"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                  class="w-full h-full"
-                ></iframe>
+          return (
+            <article class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 p-6 sm:p-7 flex flex-col gap-4">
+              <div class="text-xs font-semibold tracking-wide text-blue-600 dark:text-blue-400 uppercase">
+                {productLabel}
               </div>
-            )}
 
-            <div class="mt-4 flex items-center gap-3">
-              <div class="h-10 w-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-sm font-semibold text-slate-700 dark:text-slate-200">
-                {person?.person_name
-                  ? person.person_name.charAt(0)
-                  : audienceLabel.charAt(0)}
-              </div>
-              <div>
-                <div class="text-sm font-semibold text-slate-900 dark:text-white">
-                  {person?.person_name ?? audienceLabel}
+              <p class="text-base sm:text-lg text-slate-800 dark:text-slate-100 leading-relaxed">
+                “{testimonial.quote_short}”
+              </p>
+
+              {youtubeId && (
+                <div class="mt-2 aspect-video rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800">
+                  <iframe
+                    src={`https://www.youtube.com/embed/${youtubeId}`}
+                    title="Video testimonial"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    class="w-full h-full"
+                  />
                 </div>
-                <div class="text-xs text-slate-500 dark:text-slate-400">
-                  {person?.person_designation}
-                  {person?.person_designation && person?.person_company ? ' · ' : ''}
-                  {person?.person_company}
+              )}
+
+              <div class="mt-4 flex items-center gap-3">
+                <div class="h-10 w-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-sm font-semibold text-slate-700 dark:text-slate-200">
+                  {person?.person_name ? person.person_name.charAt(0) : audienceLabel.charAt(0)}
+                </div>
+                <div>
+                  <div class="text-sm font-semibold text-slate-900 dark:text-white">
+                    {person?.person_name ?? audienceLabel}
+                  </div>
+                  <div class="text-xs text-slate-500 dark:text-slate-400">
+                    {person?.person_designation}
+                    {person?.person_designation && person?.person_company ? ' · ' : ''}
+                    {person?.person_company}
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-        );
-      })}
+            </article>
+          );
+        })
+      }
     </div>
   </div>
 </section>

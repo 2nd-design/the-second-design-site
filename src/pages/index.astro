@@ -13,14 +13,6 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import TestimonialsSection from '~/components/TestimonialsSection.astro';
 
-// Brand logos (local assets)
-import mcdonaldsLogo from '~/assets/logos/mcdonalds.svg';
-import imgAcademyLogo from '~/assets/logos/img-academy.svg';
-import glovoLogo from '~/assets/logos/glovo.svg';
-import graphyLogo from '~/assets/logos/graphy.svg';
-import fossUnitedLogo from '~/assets/logos/foss-united.svg';
-import tinkerhubLogo from '~/assets/logos/tinkerhub.svg';
-
 const metadata = {
   title: 'The Second Design - We design learning experiences that transform people',
   description:
@@ -30,37 +22,34 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  <!-- HERO -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Book an inquiry call',
+        href: '/contact',
+        icon: 'tabler:phone-call',
+      },
+      { text: 'Explore Real World Ready', href: '/real-world-ready' },
+    ]}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'The Second Design' }}
+  >
+    <!-- TITLE -->
+    <Fragment slot="title">
+      <span class="block sm:inline">We design</span>
+      <span class="block sm:inline text-accent dark:text-white"> learning experiences that transform people. </span>
+    </Fragment>
 
-<!-- HERO -->
-<Hero
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Book an inquiry call',
-      href: '/contact',
-      icon: 'tabler:phone-call',
-    },
-    { text: 'Explore Real World Ready', href: '/real-world-ready' },
-  ]}
-  image={{ src: '~/assets/images/hero-image.png', alt: 'The Second Design' }}
->
-  <!-- TITLE -->
-  <Fragment slot="title">
-    <span class="block sm:inline">We design</span>
-    <span class="block sm:inline text-accent dark:text-white">
-      learning experiences that transform people.
-    </span>
-  </Fragment>
-
-  <!-- SUBTITLE -->
-  <Fragment slot="subtitle">
-    <!-- Same copy everywhere, no hiding on mobile -->
-    <span class="block text-slate-700 dark:text-slate-300">
-      The Second Design is an Education Design Studio. We work with businesses, colleges, and nonprofits
-      to turn their expertise into practical, real-world learning experiences.
-    </span>
-  </Fragment>
-</Hero>
+    <!-- SUBTITLE -->
+    <Fragment slot="subtitle">
+      <!-- Same copy everywhere, no hiding on mobile -->
+      <span class="block text-slate-700 dark:text-slate-300">
+        The Second Design is an Education Design Studio. We work with businesses, colleges, and nonprofits to turn their
+        expertise into practical, real-world learning experiences.
+      </span>
+    </Fragment>
+  </Hero>
 
   <!-- NOTE -->
   <Note
@@ -68,54 +57,28 @@ const metadata = {
     description="We help organisations design powerful learning environments - for employees, students, and communities. You bring the domain expertise. We bring the pedagogy, structure, and learner experience."
   />
 
-    <!-- BRANDS STRIP: Trusted by professionals -->
-<section class="py-12 bg-white dark:bg-slate-950">
-  <div class="container mx-auto text-center space-y-6">
-    <p class="text-sm font-semibold tracking-wide text-slate-500 dark:text-slate-400 uppercase">
-      Trusted by professionals from
-    </p>
+  <!-- BRANDS STRIP: Trusted by professionals -->
+  <section class="py-12 bg-white dark:bg-slate-950">
+    <div class="container mx-auto text-center space-y-6">
+      <p class="text-sm font-semibold tracking-wide text-slate-500 dark:text-slate-400 uppercase">
+        Trusted by professionals from
+      </p>
 
-    <div class="flex flex-wrap justify-center items-center gap-10 opacity-90 dark:opacity-95">
+      <div class="flex flex-wrap justify-center items-center gap-10 opacity-90 dark:opacity-95">
+        <img src="/logos/mcdonalds.png" alt="McDonald's" class="h-16 w-auto object-contain" />
 
-      <img
-        src="/logos/mcdonalds.png"
-        alt="McDonald's"
-        class="h-16 w-auto object-contain"
-      />
+        <img src="/logos/img-academy.jpeg" alt="IMG Academy" class="h-16 w-auto object-contain" />
 
-      <img
-        src="/logos/img-academy.jpeg"
-        alt="IMG Academy"
-        class="h-16 w-auto object-contain"
-      />
+        <img src="/logos/glovo.svg" alt="Glovo" class="h-16 w-auto object-contain" />
 
-      <img
-        src="/logos/glovo.svg"
-        alt="Glovo"
-        class="h-16 w-auto object-contain"
-      />
+        <img src="/logos/graphy.jpeg" alt="Graphy by Unacademy" class="h-16 w-auto object-contain" />
 
-      <img
-        src="/logos/graphy.jpeg"
-        alt="Graphy by Unacademy"
-        class="h-16 w-auto object-contain"
-      />
+        <img src="/logos/foss.png" alt="FOSS United" class="h-16 w-auto object-contain" />
 
-      <img
-        src="/logos/foss.png"
-        alt="FOSS United"
-        class="h-16 w-auto object-contain"
-      />
-
-      <img
-        src="/logos/tinkerhub.png"
-        alt="TinkerHub"
-        class="h-16 w-auto object-contain"
-      />
-
+        <img src="/logos/tinkerhub.png" alt="TinkerHub" class="h-16 w-auto object-contain" />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- FEATURES: Who we design for -->
   <Features
@@ -132,8 +95,7 @@ const metadata = {
       },
       {
         title: 'NGOs & Foundations',
-        description:
-          'Programs for youth, fellows, volunteers, and communities where pedagogy and impact both matter.',
+        description: 'Programs for youth, fellows, volunteers, and communities where pedagogy and impact both matter.',
         icon: 'tabler:users',
       },
       {
@@ -156,8 +118,7 @@ const metadata = {
       },
       {
         title: 'Pilots & experiments',
-        description:
-          'Short, well-designed pilots to quickly test ideas before committing to full multi-module builds.',
+        description: 'Short, well-designed pilots to quickly test ideas before committing to full multi-module builds.',
         icon: 'tabler:flask',
       },
     ]}
@@ -207,8 +168,8 @@ const metadata = {
         Designing learning environments, not just content
       </h3>
       <p class="text-slate-700 dark:text-slate-300">
-        Most programs fail not because the content is bad, but because the environment isn’t designed for
-        learning. We fix that.
+        Most programs fail not because the content is bad, but because the environment isn’t designed for learning. We
+        fix that.
       </p>
     </Fragment>
 
@@ -229,20 +190,17 @@ const metadata = {
       },
       {
         title: 'Step 2: <span class="font-medium">Diagnostic sprint</span>',
-        description:
-          'A short diagnostic phase to clarify the problem, learner profile, and success metrics.',
+        description: 'A short diagnostic phase to clarify the problem, learner profile, and success metrics.',
         icon: 'tabler:route',
       },
       {
         title: 'Step 3: <span class="font-medium">Design &amp; pilot</span>',
-        description:
-          'We design the program, run a pilot, and refine the experience using real feedback.',
+        description: 'We design the program, run a pilot, and refine the experience using real feedback.',
         icon: 'tabler:flame',
       },
       {
         title: 'Step 4: <span class="font-medium">Handover &amp; scaling</span>',
-        description:
-          'We hand over guides and structures so your team can run it repeatedly.',
+        description: 'We hand over guides and structures so your team can run it repeatedly.',
         icon: 'tabler:arrow-badge-right',
       },
     ]}
@@ -265,38 +223,33 @@ const metadata = {
       },
       {
         title: 'Learning environment',
-        description:
-          'Safety, pacing, activities — not just slides.',
+        description: 'Safety, pacing, activities — not just slides.',
         icon: 'tabler:users-group',
       },
       {
         title: 'Activities & practice',
-        description:
-          'Doing beats listening. Always.',
+        description: 'Doing beats listening. Always.',
         icon: 'tabler:checklist',
       },
       {
         title: 'Facilitator experience',
-        description:
-          'Guides so facilitators can run confidently.',
+        description: 'Guides so facilitators can run confidently.',
         icon: 'tabler:user-star',
       },
       {
         title: 'Feedback loops',
-        description:
-          'We fold feedback into each new run.',
+        description: 'We fold feedback into each new run.',
         icon: 'tabler:message-dots',
       },
       {
         title: 'Repeatability',
-        description:
-          'Programs you can run again and again.',
+        description: 'Programs you can run again and again.',
         icon: 'tabler:repeat',
       },
     ]}
   />
 
-    <!-- REAL WORLD READY BLOCK -->
+  <!-- REAL WORLD READY BLOCK -->
   <Content
     isAfterContent
     tagline="Flagship program"
@@ -330,9 +283,9 @@ const metadata = {
   >
     <Fragment slot="content">
       <p class="text-slate-700 dark:text-slate-300">
-        Real World Ready is our flagship program for students and young professionals. It gives them structured
-        practice in starting things, working with others, and making decisions about their future with intention. The core promise is the same: move young people
-        from passive consumption to doing real work in the real world.
+        Real World Ready is our flagship program for students and young professionals. It gives them structured practice
+        in starting things, working with others, and making decisions about their future with intention. The core
+        promise is the same: move young people from passive consumption to doing real work in the real world.
       </p>
     </Fragment>
 
@@ -356,33 +309,27 @@ const metadata = {
     items={[
       {
         title: 'What kind of organisations do you work with?',
-        description:
-          'Colleges, NGOs, foundations, startups, and companies — anyone serious about real learning.',
+        description: 'Colleges, NGOs, foundations, startups, and companies — anyone serious about real learning.',
       },
       {
         title: 'Can you run Real World Ready?',
-        description:
-          'Yes. We co-design formats, adapt to your calendar, and run with your learners as partners.',
+        description: 'Yes. We co-design formats, adapt to your calendar, and run with your learners as partners.',
       },
       {
         title: 'Do you do one-off workshops?',
-        description:
-          'Sometimes — but only when they fit into a larger transformation.',
+        description: 'Sometimes — but only when they fit into a larger transformation.',
       },
       {
         title: 'Where are you based?',
-        description:
-          'India. We work with distributed teams internationally.',
+        description: 'India. We work with distributed teams internationally.',
       },
       {
         title: 'What does an engagement cost?',
-        description:
-          'Depends on depth: diagnostics < full builds < multi-cohort programs.',
+        description: 'Depends on depth: diagnostics < full builds < multi-cohort programs.',
       },
       {
         title: 'How do we start?',
-        description:
-          'Send us a short note about your learners and goals. We’ll reply quickly.',
+        description: 'Send us a short note about your learners and goals. We’ll reply quickly.',
       },
     ]}
   />
@@ -404,14 +351,11 @@ const metadata = {
       { text: 'See consulting details', href: '/consulting' },
     ]}
   >
-    <Fragment slot="title">
-      Have a learning problem that needs a serious partner?
-    </Fragment>
+    <Fragment slot="title"> Have a learning problem that needs a serious partner? </Fragment>
 
     <Fragment slot="subtitle">
-      Bring us your learners, constraints, and goals. We’ll help you figure out whether a new program, an
-      iteration, or a focused pilot makes the most sense.
+      Bring us your learners, constraints, and goals. We’ll help you figure out whether a new program, an iteration, or
+      a focused pilot makes the most sense.
     </Fragment>
   </CallToAction>
-
 </Layout>

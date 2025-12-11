@@ -20,12 +20,10 @@ const metadata = {
   <main class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50">
     <section class="py-16 border-b border-slate-200 dark:border-slate-800">
       <div class="container mx-auto max-w-5xl space-y-8 text-center">
-        <h1 class="text-3xl font-bold tracking-tight">
-          Logo Layout Playground
-        </h1>
+        <h1 class="text-3xl font-bold tracking-tight">Logo Layout Playground</h1>
         <p class="text-slate-600 dark:text-slate-300 text-base leading-relaxed max-w-2xl mx-auto">
-          These are dummy logos pulled from an online placeholder service so you can decide which layout
-          feels right before wiring in the actual brand assets.
+          These are dummy logos pulled from an online placeholder service so you can decide which layout feels right
+          before wiring in the actual brand assets.
         </p>
       </div>
     </section>
@@ -34,15 +32,11 @@ const metadata = {
     <section class="py-16 bg-slate-50 dark:bg-slate-950">
       <div class="container mx-auto max-w-6xl space-y-10 text-center">
         <div class="space-y-3">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-slate-500 dark:text-slate-400">
-            Layout 1
-          </p>
-          <h2 class="text-2xl font-semibold tracking-tight">
-            Simple centered strip
-          </h2>
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-slate-500 dark:text-slate-400">Layout 1</p>
+          <h2 class="text-2xl font-semibold tracking-tight">Simple centered strip</h2>
           <p class="text-sm text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Clean, minimal strip. Best when you just want a subtle row of credibility logos
-            without stealing focus from the hero.
+            Clean, minimal strip. Best when you just want a subtle row of credibility logos without stealing focus from
+            the hero.
           </p>
         </div>
 
@@ -65,15 +59,11 @@ const metadata = {
     <section class="py-16 border-y border-slate-200 bg-white dark:bg-slate-950 dark:border-slate-800">
       <div class="container mx-auto max-w-6xl space-y-10">
         <div class="text-center space-y-3">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-slate-500 dark:text-slate-400">
-            Layout 2
-          </p>
-          <h2 class="text-2xl font-semibold tracking-tight">
-            Carded grid with subtle depth
-          </h2>
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-slate-500 dark:text-slate-400">Layout 2</p>
+          <h2 class="text-2xl font-semibold tracking-tight">Carded grid with subtle depth</h2>
           <p class="text-sm text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Each logo sits inside a soft card. Feels more “productized” and works well if you
-            want to group or label logos later (e.g. consulting, RWR, products).
+            Each logo sits inside a soft card. Feels more “productized” and works well if you want to group or label
+            logos later (e.g. consulting, RWR, products).
           </p>
         </div>
 
@@ -103,15 +93,11 @@ const metadata = {
     <section class="py-16 bg-slate-50 dark:bg-slate-950">
       <div class="container mx-auto max-w-6xl space-y-10">
         <div class="text-center space-y-3">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-slate-500 dark:text-slate-400">
-            Layout 3
-          </p>
-          <h2 class="text-2xl font-semibold tracking-tight">
-            Subtle scrolling strip
-          </h2>
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-slate-500 dark:text-slate-400">Layout 3</p>
+          <h2 class="text-2xl font-semibold tracking-tight">Subtle scrolling strip</h2>
           <p class="text-sm text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
-            Faux-marquee using pure CSS. Great when you want motion without a heavy JS carousel.
-            Try narrowing your browser to see the scroll behaviour.
+            Faux-marquee using pure CSS. Great when you want motion without a heavy JS carousel. Try narrowing your
+            browser to see the scroll behaviour.
           </p>
         </div>
 
@@ -121,8 +107,8 @@ const metadata = {
                    hover:[animation-play-state:paused]"
           >
             {
-              [...logos, ...logos].map((logo, index) => (
-                <div class="flex items-center justify-center flex-none" style="min-width: 160px" >
+              [...logos, ...logos].map((logo) => (
+                <div class="flex items-center justify-center flex-none" style="min-width: 160px">
                   <img
                     src={logo.src}
                     alt={logo.name}

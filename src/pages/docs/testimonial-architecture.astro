@@ -17,29 +17,29 @@ const metadata = {
       <h1>Testimonials Data Architecture</h1>
 
       <p>
-        This page documents how testimonials are modeled, stored, and used across The Second Design website.
-        It covers the structure of the four JSON files (products, partners, persons, testimonials) and how to
-        safely add new entries without touching TypeScript or Astro components.
+        This page documents how testimonials are modeled, stored, and used across The Second Design website. It covers
+        the structure of the four JSON files (products, partners, persons, testimonials) and how to safely add new
+        entries without touching TypeScript or Astro components.
       </p>
 
       <h2>1. Overview</h2>
       <p>Testimonials are built on four core entities:</p>
       <ul>
         <li>
-          <strong>Product</strong> – a specific offering or sub-offering, such as Real World Ready, the FOSS Hack
-          2025 intervention, consulting with Edison, Design Your First CBC, or the Udemy AI course.
+          <strong>Product</strong> – a specific offering or sub-offering, such as Real World Ready, the FOSS Hack 2025 intervention,
+          consulting with Edison, Design Your First CBC, or the Udemy AI course.
         </li>
         <li>
-          <strong>Partner</strong> – an organisation connected to products or testimonials, such as TinkerHub,
-          FOSS United, Edison, or platforms like Maven and Udemy.
+          <strong>Partner</strong> – an organisation connected to products or testimonials, such as TinkerHub, FOSS United,
+          Edison, or platforms like Maven and Udemy.
         </li>
         <li>
-          <strong>Person</strong> – a named individual (student, client, partner staff, collaborator) who gives a
-          testimonial. Anonymous voices do not get a person record.
+          <strong>Person</strong> – a named individual (student, client, partner staff, collaborator) who gives a testimonial.
+          Anonymous voices do not get a person record.
         </li>
         <li>
-          <strong>Testimonial</strong> – one asset expressing feedback: a short quote, a longer text, an email, a
-          video link, a blog post, a screenshot, or a tweet.
+          <strong>Testimonial</strong> – one asset expressing feedback: a short quote, a longer text, an email, a video link,
+          a blog post, a screenshot, or a tweet.
         </li>
       </ul>
       <p>A single testimonial can:</p>
@@ -80,29 +80,27 @@ const metadata = {
         <li>There are no comments inside JSON.</li>
       </ul>
       <p>
-        After editing any JSON file, run <code>npm run dev</code>. If a file is invalid, Astro will report which
-        file failed to parse so you can fix commas or quotes.
+        After editing any JSON file, run <code>npm run dev</code>. If a file is invalid, Astro will report which file
+        failed to parse so you can fix commas or quotes.
       </p>
 
       <h2>4. Entity reference</h2>
 
       <h3>4.1 Product (products.json)</h3>
       <p>
-        A product represents a unique offering or sub-offering. Examples: the overall Real World Ready program,
-        the FOSS Hack 2025 Real World Ready track, consulting work with Edison, the Design Your First CBC course,
-        or the Udemy AI-assisted course.
+        A product represents a unique offering or sub-offering. Examples: the overall Real World Ready program, the FOSS
+        Hack 2025 Real World Ready track, consulting work with Edison, the Design Your First CBC course, or the Udemy
+        AI-assisted course.
       </p>
       <p>Each product object includes at least:</p>
       <ul>
         <li><strong>product_id</strong> – unique ID, lowercase with dashes (for example, rwr-foss2025).</li>
         <li><strong>name</strong> – main name of the program (for example, “Real World Ready”).</li>
         <li>
-          <strong>category</strong> – broad bucket such as real_world_ready, consulting, online_course_design, or
-          generic.
+          <strong>category</strong> – broad bucket such as real_world_ready, consulting, online_course_design, or generic.
         </li>
         <li>
-          <strong>variant_name</strong> – optional sub-label for the variant, such as “FOSS Hack 2025” or “Beyond
-          the Blueprint”.
+          <strong>variant_name</strong> – optional sub-label for the variant, such as “FOSS Hack 2025” or “Beyond the Blueprint”.
         </li>
         <li><strong>partner_ids</strong> – list of partner IDs connected to this product.</li>
         <li><strong>platform</strong> – where it runs (“On-site”, “Maven”, “Udemy”, or left empty).</li>
@@ -139,16 +137,15 @@ const metadata = {
         <li><strong>other_link</strong> – optional personal site or article.</li>
         <li><strong>headshot_url</strong> – optional portrait image path.</li>
         <li>
-          <strong>relationship_type</strong> – student, client, partner_staff, collaborator, or another simple
-          label.
+          <strong>relationship_type</strong> – student, client, partner_staff, collaborator, or another simple label.
         </li>
       </ul>
       <p>Anonymous or generic quotes do not get a person entry; the testimonial simply stores a null person.</p>
 
       <h3>4.4 Testimonial (testimonials.json)</h3>
       <p>
-        A testimonial is one asset (a text quote, email, video, screenshot, blog, tweet, etc.). A single person
-        can have multiple testimonials across different products.
+        A testimonial is one asset (a text quote, email, video, screenshot, blog, tweet, etc.). A single person can have
+        multiple testimonials across different products.
       </p>
       <p>Each testimonial object includes:</p>
       <ul>
@@ -157,8 +154,8 @@ const metadata = {
         <li><strong>product_ids</strong> – list of product IDs this testimonial applies to.</li>
         <li><strong>partner_ids</strong> – list of partner IDs, if any.</li>
         <li>
-          <strong>scope</strong> – “product” if it’s about a specific program or variant, “brand” if it’s about
-          The Second Design overall.
+          <strong>scope</strong> – “product” if it’s about a specific program or variant, “brand” if it’s about The Second
+          Design overall.
         </li>
         <li>
           <strong>audience_type</strong> – partner, student, client, collaborator, or generic (who is speaking).
@@ -180,8 +177,8 @@ const metadata = {
 
       <h2>5. How to add new entries</h2>
       <p>
-        When a new testimonial comes in, you may need to add a product, a partner, a person, and finally the
-        testimonial itself. Always follow this order so references don&apos;t break.
+        When a new testimonial comes in, you may need to add a product, a partner, a person, and finally the testimonial
+        itself. Always follow this order so references don&apos;t break.
       </p>
 
       <h3>5.1 Add a new product (if needed)</h3>
@@ -189,8 +186,8 @@ const metadata = {
         <li>Open <code>src/data/products.json</code>.</li>
         <li>Copy an existing product object and paste it at the end of the array.</li>
         <li>
-          Change the fields: use a new product_id, adjust the name, category, variant_name, partner_ids,
-          platform, url, and description_short.
+          Change the fields: use a new product_id, adjust the name, category, variant_name, partner_ids, platform, url,
+          and description_short.
         </li>
         <li>Keep status as “active” unless the product is retired.</li>
       </ol>
@@ -215,9 +212,8 @@ const metadata = {
         <li>Open <code>src/data/testimonials.json</code>.</li>
         <li>Copy an existing testimonial object and paste it at the end.</li>
         <li>
-          Set a new testimonial_id, link the correct person_id (or leave it empty), set product_ids and
-          partner_ids, choose a scope, audience_type, and source_type, and then fill quote_short and
-          quote_long.
+          Set a new testimonial_id, link the correct person_id (or leave it empty), set product_ids and partner_ids,
+          choose a scope, audience_type, and source_type, and then fill quote_short and quote_long.
         </li>
         <li>Set the date and priority and mark is_published as true when you want it live.</li>
       </ol>
@@ -225,28 +221,28 @@ const metadata = {
       <h2>6. Display rules</h2>
       <ul>
         <li>
-          The homepage uses <code>&lt;TestimonialsSection /&gt;</code> with no productId, so it shows only
-          testimonials whose scope is set to “brand”.
+          The homepage uses <code>&lt;TestimonialsSection /&gt;</code> with no productId, so it shows only testimonials whose
+          scope is set to “brand”.
         </li>
         <li>
           Product or program pages can pass a productId, e.g.
-          <code>&lt;TestimonialsSection productId="rwr-foss2025" /&gt;</code>, to show testimonials linked to
-          that product.
+          <code>&lt;TestimonialsSection productId="rwr-foss2025" /&gt;</code>, to show testimonials linked to that
+          product.
         </li>
         <li>
-          Testimonials are sorted first by priority (hero, then high, then normal, then low) and then by date
-          (newest first).
+          Testimonials are sorted first by priority (hero, then high, then normal, then low) and then by date (newest
+          first).
         </li>
         <li>
-          Videos and blogs show a “watch” or “read” link when source_type is video or blog; screenshots are
-          shown when source_type is image and an image_url is present.
+          Videos and blogs show a “watch” or “read” link when source_type is video or blog; screenshots are shown when
+          source_type is image and an image_url is present.
         </li>
       </ul>
 
       <p>
         The whole point of this setup is that the data layer is boring and predictable. You can keep adding new
-        products, partners, people, and testimonials by editing JSON only, without changing any TypeScript or
-        layout code.
+        products, partners, people, and testimonials by editing JSON only, without changing any TypeScript or layout
+        code.
       </p>
     </div>
   </section>

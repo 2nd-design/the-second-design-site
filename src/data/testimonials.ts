@@ -81,18 +81,11 @@ const PRIORITY_ORDER: Record<RawTestimonial['priority'], number> = {
 const resolvedTestimonials: ResolvedTestimonial[] = rawTestimonials
   .filter((t) => t.is_published)
   .map((t) => {
-    const person =
-      t.person_id != null
-        ? persons.find((p) => p.person_id === t.person_id)
-        : undefined;
+    const person = t.person_id != null ? persons.find((p) => p.person_id === t.person_id) : undefined;
 
-    const productObjs = products.filter((p) =>
-      t.product_ids.includes(p.product_id),
-    );
+    const productObjs = products.filter((p) => t.product_ids.includes(p.product_id));
 
-    const partnerObjs = partners.filter((pt) =>
-      (t.partner_ids || []).includes(pt.partner_id),
-    );
+    const partnerObjs = partners.filter((pt) => (t.partner_ids || []).includes(pt.partner_id));
 
     return {
       ...t,
@@ -114,13 +107,9 @@ const resolvedTestimonials: ResolvedTestimonial[] = rawTestimonials
  * - If productId is provided: all testimonials where product_ids includes it.
  * - If productId is NOT provided: brand-level testimonials (scope === 'brand').
  */
-export function getTestimonialsForProduct(
-  productId?: string,
-): ResolvedTestimonial[] {
+export function getTestimonialsForProduct(productId?: string): ResolvedTestimonial[] {
   if (productId) {
-    return resolvedTestimonials.filter((t) =>
-      t.product_ids.includes(productId),
-    );
+    return resolvedTestimonials.filter((t) => t.product_ids.includes(productId));
   }
 
   // Default: homepage / brand testimonials

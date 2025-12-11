@@ -10,7 +10,6 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-
   <!-- Hero ************************************* -->
 
   <section class="relative overflow-hidden py-24 md:py-28 bg-slate-50 dark:bg-slate-950">
@@ -18,7 +17,8 @@ const metadata = {
       class="pointer-events-none absolute inset-0 bg-gradient-to-b
              from-slate-100 via-white to-slate-100
              dark:from-slate-900 dark:via-slate-950 dark:to-violet-500/10"
-    />
+    >
+    </div>
     <div class="relative container max-w-4xl mx-auto space-y-8">
       <div class="space-y-3">
         <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">
@@ -28,13 +28,15 @@ const metadata = {
           Shitty First Draft
         </h1>
         <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
-          A session that helps learners get started, and treat imperfect first versions
-          as a necessary part of serious work - not a personal failure.
+          A session that helps learners get started, and treat imperfect first versions as a necessary part of serious
+          work - not a personal failure.
         </p>
       </div>
 
       <div class="flex flex-wrap gap-3 text-xs text-slate-600 dark:text-slate-400">
-        <span class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1">
+        <span
+          class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1"
+        >
           <Icon name="tabler:license" class="w-3.5 h-3.5" />
           Open for reuse with attribution
         </span>
@@ -42,7 +44,9 @@ const metadata = {
           <Icon name="tabler:presentation" class="w-3.5 h-3.5" />
           Slide deck + workbook
         </span>
-        <span class="inline-flex items-center gap-1 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-300 px-3 py-1">
+        <span
+          class="inline-flex items-center gap-1 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-300 px-3 py-1"
+        >
           <Icon name="tabler:users-group" class="w-3.5 h-3.5" />
           Designed for cohorts & workshops
         </span>
@@ -50,7 +54,7 @@ const metadata = {
     </div>
   </section>
 
-    <!-- Featured Video ************************************* -->
+  <!-- Featured Video ************************************* -->
 
   <section class="py-16 bg-white dark:bg-slate-950/70 border-b border-slate-200/60 dark:border-slate-800/60">
     <div class="container max-w-3xl mx-auto space-y-6 px-4 sm:px-6">
@@ -62,25 +66,24 @@ const metadata = {
       </p>
 
       <!-- Responsive YouTube embed -->
-      <div class="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-sm shadow-slate-200/80 dark:shadow-black/40">
+      <div
+        class="relative w-full pt-[56.25%] rounded-xl overflow-hidden shadow-sm shadow-slate-200/80 dark:shadow-black/40"
+      >
         <iframe
           class="absolute inset-0 w-full h-full"
           src="https://www.youtube.com/embed/zc3okOwRB3s"
           title="Shitty First Draft - The Second Design"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen></iframe>
       </div>
     </div>
   </section>
 
   <!-- What the session does ************************ -->
 
-  <section
-    class="py-20 bg-white border-y border-slate-200
-           dark:bg-slate-950/80 dark:border-slate-800"
-  >
+  <section class="py-20 bg-white border-y border-slate-200
+           dark:bg-slate-950/80 dark:border-slate-800">
     <div class="container max-w-5xl mx-auto grid gap-12 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-start">
       <!-- Text -->
       <div class="space-y-8">
@@ -89,21 +92,21 @@ const metadata = {
             Why “Shitty First Draft” exists
           </h2>
           <p class="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
-            Most students (and adults) are stuck not because they lack ideas, but because they’re afraid of
-            making something that looks stupid, incomplete, or “not good enough yet”. So they never ship the
-            first version - and nothing compounds.
+            Most students (and adults) are stuck not because they lack ideas, but because they’re afraid of making
+            something that looks stupid, incomplete, or “not good enough yet”. So they never ship the first version -
+            and nothing compounds.
           </p>
           <p class="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
-            This session gives people a structured push to make that first ugly version anyway - on purpose -
-            and see that it’s a feature, not a bug, of doing meaningful work.
+            This session gives people a structured push to make that first ugly version anyway - on purpose - and see
+            that it’s a feature, not a bug, of doing meaningful work.
           </p>
         </div>
 
         <div class="grid gap-4 md:grid-cols-2">
-          <div class="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/70">
-            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-1.5">
-              Core ideas it lands
-            </h3>
+          <div
+            class="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/70"
+          >
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-1.5">Core ideas it lands</h3>
             <ul class="text-xs md:text-sm text-slate-700 dark:text-slate-300 space-y-1.5">
               <li>• First drafts are supposed to be rough, not impressive.</li>
               <li>• Momentum beats perfection - especially early.</li>
@@ -111,10 +114,10 @@ const metadata = {
             </ul>
           </div>
 
-          <div class="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/70">
-            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-1.5">
-              Where it works best
-            </h3>
+          <div
+            class="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/70"
+          >
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-1.5">Where it works best</h3>
             <ul class="text-xs md:text-sm text-slate-700 dark:text-slate-300 space-y-1.5">
               <li>• Student cohorts starting projects or portfolios</li>
               <li>• Fellowships, makerspaces, and hackathons</li>
@@ -180,7 +183,9 @@ const metadata = {
                  p-6 flex flex-col justify-between"
         >
           <div class="space-y-3">
-            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+            <div
+              class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400"
+            >
               <Icon name="tabler:presentation-analytics" class="w-4 h-4" />
               Slide deck
             </div>
@@ -188,16 +193,13 @@ const metadata = {
               Facilitator slide deck (Google Slides)
             </h3>
             <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              Slides for running the session end-to-end. Includes prompts, framing, and scaffolding
-              for taking participants from “idea in head” to a concrete shitty first draft.
+              Slides for running the session end-to-end. Includes prompts, framing, and scaffolding for taking
+              participants from “idea in head” to a concrete shitty first draft.
             </p>
           </div>
           <div class="mt-4 text-xs text-blue-600 dark:text-blue-300 font-medium flex items-center gap-1">
             Open in Google Slides
-            <Icon
-              name="tabler:external-link"
-              class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"
-            />
+            <Icon name="tabler:external-link" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
           </div>
         </a>
 
@@ -211,7 +213,9 @@ const metadata = {
                  p-6 flex flex-col justify-between"
         >
           <div class="space-y-3">
-            <div class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+            <div
+              class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400"
+            >
               <Icon name="tabler:notebook" class="w-4 h-4" />
               Workbook
             </div>
@@ -219,16 +223,13 @@ const metadata = {
               Participant workbook (Google Doc)
             </h3>
             <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-              Printable / digital workbook that guides learners through choosing a project, drafting their
-              first version, and reflecting on what they learned from shipping something imperfect.
+              Printable / digital workbook that guides learners through choosing a project, drafting their first
+              version, and reflecting on what they learned from shipping something imperfect.
             </p>
           </div>
           <div class="mt-4 text-xs text-blue-600 dark:text-blue-300 font-medium flex items-center gap-1">
             Open in Google Docs
-            <Icon
-              name="tabler:external-link"
-              class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"
-            />
+            <Icon name="tabler:external-link" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
           </div>
         </a>
       </div>
@@ -237,10 +238,8 @@ const metadata = {
 
   <!-- License / attribution ************************ -->
 
-  <section
-    class="py-20 bg-white border-t border-slate-200
-           dark:bg-slate-950/90 dark:border-slate-800"
-  >
+  <section class="py-20 bg-white border-t border-slate-200
+           dark:bg-slate-950/90 dark:border-slate-800">
     <div class="container max-w-4xl mx-auto space-y-6 text-sm md:text-base">
       <h2 class="text-xl md:text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
         How you’re allowed to use this
@@ -248,9 +247,7 @@ const metadata = {
 
       <div class="grid gap-8 md:grid-cols-2">
         <div class="space-y-3 text-slate-700 dark:text-slate-300">
-          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">
-            You can:
-          </h3>
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">You can:</h3>
           <ul class="space-y-1.5 text-sm">
             <li>• Run this session with your own students or community.</li>
             <li>• Adapt, translate, and remix the material for your context.</li>
@@ -259,9 +256,7 @@ const metadata = {
         </div>
 
         <div class="space-y-3 text-slate-700 dark:text-slate-300">
-          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">
-            Please:
-          </h3>
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">Please:</h3>
           <ul class="space-y-1.5 text-sm">
             <li>• Credit <span class="font-semibold">The Second Design</span> as the original creators.</li>
             <li>• Link back to this page where reasonable (slides, docs, descriptions).</li>
@@ -271,10 +266,9 @@ const metadata = {
       </div>
 
       <p class="text-xs text-slate-500 dark:text-slate-400">
-        If you want a more formal license (for example, for a large institution or partner program),
-        just reach out via the contact page and we can set that up.
+        If you want a more formal license (for example, for a large institution or partner program), just reach out via
+        the contact page and we can set that up.
       </p>
     </div>
   </section>
-
 </Layout>
