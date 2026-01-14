@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: The Second Design
+  site: 'https://theseconddesign.com'
   base: '/'
   trailingSlash: false
 
@@ -9,22 +9,22 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: The Second Design
+    template: '%s — The Second Design'
+  description: "Design and technology studio crafting thoughtful digital experiences."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: The Second Design
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/hero-image.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@arthelokyo'
-    site: '@arthelokyo'
+    handle: '@theseconddesign'
+    site: '@theseconddesign'
     cardType: summary_large_image
 
 i18n:
