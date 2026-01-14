@@ -11,246 +11,293 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero ************************************* -->
-  <section class="relative overflow-hidden py-20 sm:py-24 md:py-28 bg-slate-50 dark:bg-slate-950">
-    <!-- Background gradient -->
-    <div
-      class="pointer-events-none absolute inset-0 bg-gradient-to-b
-             from-slate-100 via-white to-slate-100
-             dark:from-blue-500/15 dark:via-slate-950 dark:to-violet-500/15"
-    >
+  <section class="relative overflow-hidden min-h-[90vh] flex items-center bg-slate-950">
+    <!-- Animated gradient background -->
+    <div class="absolute inset-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-violet-600/20 via-slate-950 to-emerald-600/20"></div>
+      <div class="absolute top-0 left-1/4 w-[600px] h-[600px] bg-violet-500/30 rounded-full blur-[120px] animate-pulse"></div>
+      <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[100px] animate-pulse" style="animation-delay: 1s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-500/10 rounded-full blur-[150px]"></div>
     </div>
 
-    <div class="relative container max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid gap-12 md:grid-cols-2 items-center">
-        <!-- Text -->
-        <div class="space-y-6 sm:space-y-8">
-          <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">
-            Flagship program
-          </p>
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
-            Real World Ready
-          </h1>
-          <p class="text-base sm:text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
-            A flagship program that helps young people build the skills, habits, and inner tools to move in the real
-            world — starting things, making decisions, communicating clearly, working with others, and navigating their
-            careers with intention.
-          </p>
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
 
-          <ul class="space-y-3 text-sm sm:text-base text-slate-700 dark:text-slate-300">
-            <li class="flex items-center gap-3">
-              <span
-                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-300"
-              >
-                <Icon name="tabler:sparkles" class="w-4 h-4" />
-              </span>
-              Practice-heavy experiences where students actually do things in the session (not passive lectures).
-            </li>
-            <li class="flex items-center gap-3">
-              <span
-                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-300"
-              >
-                <Icon name="tabler:route" class="w-4 h-4" />
-              </span>
-              Careers, people, and projects looked at as systems — broken down into small, deliberate experiments.
-            </li>
-            <li class="flex items-center gap-3">
-              <span
-                class="inline-flex h-6 w-6 items-center justify-center rounded-full bg-violet-500/10 text-violet-600 dark:text-violet-300"
-              >
-                <Icon name="tabler:rocket" class="w-4 h-4" />
-              </span>
-              Real-world projects, outreach, communication, and shipping work into the world — not just “doing assignments”.
-            </li>
-          </ul>
+    <div class="relative container max-w-6xl mx-auto px-4 sm:px-6 py-20">
+      <div class="max-w-4xl">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-8">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span class="text-xs font-medium text-slate-300 tracking-wide">Flagship Program</span>
+        </div>
 
-          <div class="pt-2">
-            <a
-              href="/contact"
-              class="inline-flex items-center justify-center rounded-xl bg-slate-900 text-slate-50
-                     px-6 py-3 text-sm font-semibold shadow-lg shadow-blue-500/30
-                     hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
-                     transition w-full sm:w-auto"
-            >
-              Bring Real World Ready to your organisation
-            </a>
+        <!-- Main headline -->
+        <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6">
+          Real World
+          <span class="block bg-gradient-to-r from-violet-400 via-blue-400 to-emerald-400 bg-clip-text text-transparent">
+            Ready
+          </span>
+        </h1>
+
+        <p class="text-xl sm:text-2xl text-slate-400 leading-relaxed max-w-2xl mb-10">
+          Helping young people build the skills, habits, and inner tools to move in the real world — starting things, making decisions, and navigating careers with intention.
+        </p>
+
+        <!-- Stats row -->
+        <div class="flex flex-wrap gap-8 mb-10">
+          <div class="space-y-1">
+            <div class="text-3xl sm:text-4xl font-bold text-white">30+</div>
+            <div class="text-sm text-slate-500">Sessions designed</div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-3xl sm:text-4xl font-bold text-white">500+</div>
+            <div class="text-sm text-slate-500">Students impacted</div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-3xl sm:text-4xl font-bold text-white">10+</div>
+            <div class="text-sm text-slate-500">Partner orgs</div>
           </div>
         </div>
 
-        <!-- Hero Image -->
-        <div class="relative">
-          <div
-            class="absolute -inset-6 sm:-inset-8 rounded-[2rem] blur-2xl
-                   bg-gradient-to-tr from-emerald-400/15 via-blue-500/10 to-violet-500/15
-                   dark:from-emerald-400/20 dark:via-blue-500/15 dark:to-violet-500/20"
+        <!-- CTA -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="/contact"
+            class="group inline-flex items-center justify-center gap-2 rounded-full bg-white text-slate-900
+                   px-8 py-4 text-sm font-semibold shadow-2xl shadow-white/20
+                   hover:bg-slate-100 transition-all duration-300 hover:scale-105"
           >
+            Bring this to your organisation
+            <Icon name="tabler:arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a
+            href="#case-studies"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/10 text-white
+                   px-8 py-4 text-sm font-semibold backdrop-blur-sm
+                   hover:bg-white/10 transition-all duration-300"
+          >
+            See it in action
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-500">
+      <span class="text-xs tracking-widest uppercase">Scroll</span>
+      <div class="w-px h-8 bg-gradient-to-b from-slate-500 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- What makes it different ***************** -->
+  <section class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-200 dark:via-slate-800 to-transparent"></div>
+
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-8">
+          <div class="space-y-4">
+            <p class="text-sm font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-400 uppercase">The Approach</p>
+            <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+              Not lectures.<br/>
+              <span class="text-slate-400 dark:text-slate-500">Real practice.</span>
+            </h2>
           </div>
-          <figure
-            class="relative rounded-2xl sm:rounded-3xl border bg-white/90 border-slate-200
-                   shadow-xl shadow-slate-300/70 overflow-hidden
-                   dark:bg-slate-950/80 dark:border-slate-800 dark:shadow-black/40"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=2070&q=80"
-              alt="Students collaborating in a high-energy learning environment."
-              class="w-full h-full object-cover"
-            />
-            <figcaption
-              class="absolute bottom-0 inset-x-0 bg-gradient-to-t
-                     from-white/95 to-transparent px-4 sm:px-5 pb-3 sm:pb-4 pt-8 sm:pt-10 text-left text-xs text-slate-600
-                     dark:from-slate-950/90 dark:text-slate-300"
-            >
-              Real World Ready
-            </figcaption>
-          </figure>
+          <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+            Real World Ready is not about motivational speeches or neat lists of "skills". It's a sequence of experiences where students actually do things — start projects, make decisions, communicate, and see themselves differently.
+          </p>
+        </div>
+
+        <div class="grid gap-4">
+          <!-- Card 1 -->
+          <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-violet-500/10 to-violet-500/5 border border-violet-500/20 hover:border-violet-500/40 transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-violet-500/20 flex items-center justify-center">
+                <Icon name="tabler:sparkles" class="w-6 h-6 text-violet-500 dark:text-violet-400" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 dark:text-white mb-1">Practice-heavy sessions</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Students actually do things in the session — not passive lectures.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-blue-500/5 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                <Icon name="tabler:route" class="w-6 h-6 text-blue-500 dark:text-blue-400" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 dark:text-white mb-1">Systems thinking</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Careers and projects as systems — broken into small, deliberate experiments.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                <Icon name="tabler:rocket" class="w-6 h-6 text-emerald-500 dark:text-emerald-400" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-slate-900 dark:text-white mb-1">Ship real work</h3>
+                <p class="text-sm text-slate-600 dark:text-slate-400">Real-world projects and outreach — not just "doing assignments".</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Who it's for ***************************** -->
-  <section class="py-20 border-y border-slate-200 bg-slate-50
-           dark:bg-slate-950/70 dark:border-slate-800">
-    <div class="container max-w-4xl mx-auto space-y-10 px-4 sm:px-6">
-      <div class="text-center space-y-4">
-        <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">Partners</p>
-        <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
-          Who Real World Ready is for
+  <section class="py-24 sm:py-32 bg-slate-50 dark:bg-slate-900/50 relative">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">Partners</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          Who it's for
         </h2>
-        <p class="text-slate-700 dark:text-slate-300 max-w-2xl mx-auto text-base leading-relaxed">
-          Real World Ready usually runs in partnership with organisations that work with young people — colleges,
-          foundations, communities, and companies. We also occasionally run open cohorts that individual students and
-          young professionals can join directly.
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          We partner with organisations that work with young people. We also run open cohorts for individuals.
         </p>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-3 text-left">
-        <!-- Colleges & Universities -->
-        <div
-          class="rounded-2xl p-8 space-y-3 border bg-white
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/70 dark:border-slate-800/70 dark:shadow-black/30"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-xl
-                   bg-violet-500/10 text-violet-600 p-2.5
-                   dark:bg-violet-500/15 dark:text-violet-300"
-          >
-            <Icon name="tabler:school" class="w-5 h-5" />
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Colleges -->
+        <div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-xl shadow-slate-200/50 dark:shadow-black/20 border border-slate-100 dark:border-slate-800 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-500 hover:-translate-y-1">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-violet-500/10 to-transparent rounded-3xl"></div>
+          <div class="relative">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 to-violet-600 flex items-center justify-center mb-6 shadow-lg shadow-violet-500/30">
+              <Icon name="tabler:school" class="w-7 h-7 text-white" />
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Colleges & Universities</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+              A parallel "real-world curriculum" alongside degrees.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-500">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-violet-500"></div>
+                Engineering & science colleges
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-violet-500"></div>
+                Professional degree programs
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-violet-500"></div>
+                Innovation / entrepreneurship cells
+              </li>
+            </ul>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Colleges & Universities</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300">
-            A parallel “real-world curriculum” that sits alongside degrees and prepares students for work, projects, and
-            life after college.
-          </p>
-          <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc list-inside space-y-1">
-            <li>Engineering & science colleges</li>
-            <li>Professional degree programs</li>
-            <li>Campus innovation / entrepreneurship cells</li>
-          </ul>
         </div>
 
-        <!-- Nonprofits & Foundations -->
-        <div
-          class="rounded-2xl p-8 space-y-3 border bg-white
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/70 dark:border-slate-800/70 dark:shadow-black/30"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-xl
-                   bg-emerald-500/10 text-emerald-600 p-2.5
-                   dark:bg-emerald-500/15 dark:text-emerald-300"
-          >
-            <Icon name="tabler:heart-handshake" class="w-5 h-5" />
+        <!-- Nonprofits -->
+        <div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-xl shadow-slate-200/50 dark:shadow-black/20 border border-slate-100 dark:border-slate-800 hover:border-emerald-300 dark:hover:border-emerald-700 transition-all duration-500 hover:-translate-y-1">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-3xl"></div>
+          <div class="relative">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/30">
+              <Icon name="tabler:heart-handshake" class="w-7 h-7 text-white" />
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Nonprofits & Foundations</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+              Youth programs where initiative and career readiness matter.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-500">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-emerald-500"></div>
+                Fellowship & scholarship cohorts
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-emerald-500"></div>
+                Community learning initiatives
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-emerald-500"></div>
+                CSR programs for youth skilling
+              </li>
+            </ul>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Nonprofits & Foundations</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300">
-            Youth-focused programs where opportunity-finding, initiative, and long-term career readiness are central to
-            your mission.
-          </p>
-          <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc list-inside space-y-1">
-            <li>Fellowship & scholarship cohorts</li>
-            <li>Community learning initiatives</li>
-            <li>CSR programs for youth skilling</li>
-          </ul>
         </div>
 
-        <!-- Student & Tech Communities -->
-        <div
-          class="rounded-2xl p-8 space-y-3 border bg-white
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/70 dark:border-slate-800/70 dark:shadow-black/30"
-        >
-          <div
-            class="inline-flex items-center justify-center rounded-xl
-                   bg-blue-500/10 text-blue-600 p-2.5
-                   dark:bg-blue-500/15 dark:text-blue-300"
-          >
-            <Icon name="tabler:users-group" class="w-5 h-5" />
+        <!-- Communities -->
+        <div class="group relative bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-xl shadow-slate-200/50 dark:shadow-black/20 border border-slate-100 dark:border-slate-800 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-500 hover:-translate-y-1">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-transparent rounded-3xl"></div>
+          <div class="relative">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+              <Icon name="tabler:users-group" class="w-7 h-7 text-white" />
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Student & Tech Communities</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">
+              Turn curiosity into projects and real opportunities.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-500 dark:text-slate-500">
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-blue-500"></div>
+                Developer & open-source communities
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-blue-500"></div>
+                Campus clubs & maker spaces
+              </li>
+              <li class="flex items-center gap-2">
+                <div class="w-1 h-1 rounded-full bg-blue-500"></div>
+                Startup / innovation communities
+              </li>
+            </ul>
           </div>
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Student & Tech Communities</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300">
-            Communities that attract self-driven learners and want a structured journey that turns curiosity into
-            projects, contributions, and real opportunities.
-          </p>
-          <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc list-inside space-y-1">
-            <li>Developer & open-source communities</li>
-            <li>Campus clubs & maker spaces</li>
-            <li>Startup / innovation communities</li>
-          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- What students gain ************************ -->
-  <section class="py-24 bg-white dark:bg-slate-950">
-    <div class="container max-w-4xl mx-auto space-y-10 px-4 sm:px-6">
-      <div class="text-center space-y-4">
-        <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">Outcomes</p>
-        <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+  <!-- Outcomes ********************************* -->
+  <section class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <!-- Decorative elements -->
+    <div class="absolute top-1/2 left-0 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute top-1/2 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+
+    <div class="relative container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-sm font-semibold tracking-[0.2em] text-blue-600 dark:text-blue-400 uppercase mb-4">Outcomes</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
           What students walk away with
         </h2>
-        <p class="text-slate-700 dark:text-slate-300 max-w-2xl mx-auto text-base leading-relaxed">
-          Real World Ready is not about motivational speeches or neat lists of “skills”. It is a sequence of experiences
-          where students start things, work through friction, make decisions, communicate, reflect, and see themselves
-          differently on the other side.
-        </p>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-3 text-left">
-        <div
-          class="rounded-2xl p-8 border bg-slate-50
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/60 dark:border-slate-800/70 dark:shadow-black/25 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Start and keep moving</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-            Tools to move from overthinking to action — handling fear, perfectionism, and confusion so that ideas
-            actually turn into projects, outreach, experiments, and visible proof of work.
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center space-y-4">
+          <div class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-violet-100 to-violet-50 dark:from-violet-500/20 dark:to-violet-500/10 flex items-center justify-center">
+            <Icon name="tabler:flame" class="w-10 h-10 text-violet-600 dark:text-violet-400" />
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Start and keep moving</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Tools to move from overthinking to action — handling fear, perfectionism, and confusion so ideas turn into visible proof of work.
           </p>
         </div>
 
-        <div
-          class="rounded-2xl p-8 border bg-slate-50
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/60 dark:border-slate-800/70 dark:shadow-black/25 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Clarity & navigation</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-            Ways to think about careers and life as systems — mapping options, running small tests, making decisions
-            under uncertainty, and adjusting with feedback instead of drifting or freezing.
+        <div class="text-center space-y-4">
+          <div class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-500/20 dark:to-blue-500/10 flex items-center justify-center">
+            <Icon name="tabler:compass" class="w-10 h-10 text-blue-600 dark:text-blue-400" />
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Clarity & navigation</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Ways to think about careers as systems — mapping options, running small tests, making decisions under uncertainty.
           </p>
         </div>
 
-        <div
-          class="rounded-2xl p-8 border bg-slate-50
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/60 dark:border-slate-800/70 dark:shadow-black/25 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Communication & collaboration</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-            Practice in expressing themselves clearly, asking for help, reaching out to people they don’t yet know, and
-            working with others on real work instead of staying in solo “assignment mode”.
+        <div class="text-center space-y-4">
+          <div class="w-20 h-20 mx-auto rounded-3xl bg-gradient-to-br from-emerald-100 to-emerald-50 dark:from-emerald-500/20 dark:to-emerald-500/10 flex items-center justify-center">
+            <Icon name="tabler:messages" class="w-10 h-10 text-emerald-600 dark:text-emerald-400" />
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Communication & collaboration</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Practice expressing clearly, asking for help, reaching out to strangers, and working with others on real work.
           </p>
         </div>
       </div>
@@ -258,195 +305,156 @@ const metadata = {
   </section>
 
   <!-- Program formats *************************** -->
-  <section class="py-20 border-y border-slate-200 bg-slate-50
-           dark:bg-slate-950/70 dark:border-slate-800">
-    <div class="container max-w-4xl mx-auto space-y-10 px-4 sm:px-6">
-      <div class="text-center space-y-4">
-        <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">Formats</p>
-        <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">Program formats</h2>
-        <p class="text-slate-700 dark:text-slate-300 max-w-2xl mx-auto text-base leading-relaxed">
-          Real World Ready is modular. Under the hood there is a growing library of 30+ sessions — across
-          self-knowledge, communication, people skills, meta-learning, building, doing, and more. Together, we select
-          and sequence what makes sense for your learners, calendar, and constraints.
+  <section class="py-24 sm:py-32 bg-slate-950 text-white relative overflow-hidden">
+    <!-- Background pattern -->
+    <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-violet-500/20 to-transparent blur-3xl"></div>
+
+    <div class="relative container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-sm font-semibold tracking-[0.2em] text-violet-400 uppercase mb-4">Formats</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
+          Flexible formats
+        </h2>
+        <p class="text-lg text-slate-400">
+          A growing library of 30+ sessions. We select and sequence what makes sense for your learners.
         </p>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-3 text-left">
-        <div
-          class="rounded-2xl p-8 border bg-white
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/70 dark:border-slate-800/70 dark:shadow-black/30 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Signature series</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300">
-            A multi-week journey combining live sessions, activities, and reflection — designed as a flagship program
-            for your organisation or campus.
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+          <div class="text-5xl font-bold text-violet-400 mb-4">01</div>
+          <h3 class="text-xl font-bold mb-3">Signature series</h3>
+          <p class="text-slate-400 text-sm">
+            Multi-week journey combining live sessions, activities, and reflection — your flagship program.
           </p>
         </div>
 
-        <div
-          class="rounded-2xl p-8 border bg-white
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/70 dark:border-slate-800/70 dark:shadow-black/30 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Intensive bootcamps</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300">
-            Short, high-energy formats (2–5 days) that kickstart new behaviours — starting, shipping, and rethinking how
-            students approach their future and their work.
+        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+          <div class="text-5xl font-bold text-blue-400 mb-4">02</div>
+          <h3 class="text-xl font-bold mb-3">Intensive bootcamps</h3>
+          <p class="text-slate-400 text-sm">
+            Short, high-energy formats (2–5 days) that kickstart new behaviours — starting, shipping, rethinking.
           </p>
         </div>
 
-        <div
-          class="rounded-2xl p-8 border bg-white
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/70 dark:border-slate-800/70 dark:shadow-black/30 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">Custom tracks</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300">
-            Tailored tracks for specific cohorts — student leaders, fellowship batches, volunteers, or community
-            organisers — built from the same Real World Ready building blocks.
+        <div class="group p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-white/20 transition-all duration-500">
+          <div class="text-5xl font-bold text-emerald-400 mb-4">03</div>
+          <h3 class="text-xl font-bold mb-3">Custom tracks</h3>
+          <p class="text-slate-400 text-sm">
+            Tailored for specific cohorts — student leaders, fellowship batches, volunteers, community organisers.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Case studies & testimonial **************** -->
-  <section class="py-24 bg-white dark:bg-slate-950">
-    <div class="container max-w-5xl mx-auto space-y-12 px-4 sm:px-6">
-      <div class="space-y-4 text-center">
-        <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">In the wild</p>
-        <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
-          Examples of Real World Ready in the wild
+  <!-- Case studies **************************** -->
+  <section id="case-studies" class="py-24 sm:py-32 bg-white dark:bg-slate-950 relative">
+    <div class="container max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="text-sm font-semibold tracking-[0.2em] text-emerald-600 dark:text-emerald-400 uppercase mb-4">In the wild</p>
+        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white mb-6">
+          See it in action
         </h2>
-        <p class="text-slate-700 dark:text-slate-300 max-w-3xl mx-auto text-base leading-relaxed">
-          Real World Ready often runs under co-branded names with our partners. With TinkerHub, for instance, it runs as
-          {' '}
-          <span class="font-semibold">“Beyond the Blueprint”</span>. With FOSS United, it powered tracks at FOSS Hack
-          2025 to help students decide what to build and how to tell the story of their work. The DNA stays the same:
-          real-world learning, initiative, communication, execution, and reflective thinking — just adapted to each
-          community.
+        <p class="text-lg text-slate-600 dark:text-slate-400">
+          Real World Ready runs under co-branded names with partners. The DNA stays the same: real-world learning, initiative, execution.
         </p>
       </div>
 
-      <div class="grid gap-8 md:grid-cols-2 items-start">
-        {/* Featured case study */}
-        <div
-          class="rounded-3xl border bg-slate-50 border-slate-200 shadow-md shadow-slate-200/80
-                 dark:bg-slate-900/70 dark:border-slate-800/80 dark:shadow-black/40
-                 p-8 md:p-10 space-y-3"
-        >
-          <p class="text-xs font-semibold tracking-[0.22em] text-emerald-600 dark:text-emerald-300 uppercase">
-            Featured case study
-          </p>
-          <h3 class="text-2xl font-semibold text-slate-900 dark:text-slate-50">
-            Beyond the Blueprint · TinkerHub Foundation
-          </h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-            A multi-session Real World Ready series for undergraduates across Kerala, co-branded with TinkerHub.
-            Students explored agency, shitty first drafts, career design, system thinking, and navigating their future —
-            in rooms that were honest, interactive, and surprisingly vulnerable.
-          </p>
-          <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc list-inside space-y-1">
-            <li>170+ students in person at Kochi camp, plus multiple online sessions</li>
-            <li>Deep shifts in language, confidence, and how students approach opportunities</li>
-            <li>Documented as a full written case study with videos, screenshots, and student stories</li>
-          </ul>
-          <div class="pt-3">
+      <div class="grid lg:grid-cols-2 gap-8 mb-16">
+        <!-- Featured case study -->
+        <div class="group relative bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-3xl p-8 md:p-10 text-white overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+          <div class="relative space-y-4">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 text-xs font-medium">
+              <Icon name="tabler:star" class="w-3 h-3" />
+              Featured
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-bold">Beyond the Blueprint</h3>
+            <p class="text-emerald-100">TinkerHub Foundation</p>
+            <p class="text-emerald-50/80 text-sm leading-relaxed">
+              A multi-session series for undergraduates across Kerala. 170+ students explored agency, career design, and navigating their future in sessions that were honest, interactive, and surprisingly vulnerable.
+            </p>
             <a
               href="/beyond-the-blueprint"
-              class="inline-flex items-center gap-2 text-sm font-semibold
-                     text-slate-900 hover:text-slate-700
-                     dark:text-slate-50 dark:hover:text-slate-200"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-white hover:gap-3 transition-all"
             >
-              <span>Read the full case study</span>
+              Read case study
               <Icon name="tabler:arrow-right" class="w-4 h-4" />
             </a>
           </div>
         </div>
 
-        {/* FOSS Hack case */}
-        <div
-          class="rounded-2xl p-8 border bg-slate-50
-                 border-slate-200 shadow-sm shadow-slate-200/80
-                 dark:bg-slate-900/60 dark:border-slate-800/70 dark:shadow-black/25 space-y-3"
-        >
-          <h3 class="text-xl font-semibold text-slate-900 dark:text-slate-50">FOSS Hack 2025 · FOSS United</h3>
-          <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
-            An adaptation of Real World Ready for
-            {' '}
-            <span class="font-semibold">FOSS Hack 2025</span>, focused on helping student developers choose meaningful
-            problems, scope projects realistically, and showcase their work — from README and licensing to demos and
-            storytelling. You can read FOSS United&apos;s write-up of the collaboration
-            {' '}
+        <!-- FOSS Hack -->
+        <div class="group relative bg-slate-100 dark:bg-slate-900 rounded-3xl p-8 md:p-10 overflow-hidden border border-slate-200 dark:border-slate-800">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+          <div class="relative space-y-4">
+            <h3 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">FOSS Hack 2025</h3>
+            <p class="text-slate-500 dark:text-slate-400">FOSS United</p>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Helping student developers choose meaningful problems, scope projects realistically, and showcase their work — from README to demos and storytelling.
+            </p>
             <a
               href="https://fossunited.org/blog/foss-events/fosshack2025-the-second-design"
-              class="underline decoration-slate-400 hover:decoration-slate-700 dark:decoration-slate-500 dark:hover:decoration-slate-200"
               target="_blank"
               rel="noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white hover:gap-3 transition-all"
             >
-              here
+              Read on FOSS United
+              <Icon name="tabler:external-link" class="w-4 h-4" />
             </a>
-            .
-          </p>
-          <ul class="text-sm text-slate-600 dark:text-slate-400 list-disc list-inside space-y-1">
-            <li>Program tracks aligned with a real hackathon and deadlines</li>
-            <li>Emphasis on contribution, collaboration, and clear storytelling of projects</li>
-          </ul>
+          </div>
         </div>
       </div>
 
-      <!-- Video testimonial block with inline player -->
-      <div class="max-w-3xl mx-auto space-y-4">
-        <div
-          class="aspect-video rounded-2xl overflow-hidden border
-                 border-slate-200 bg-slate-100 shadow-lg shadow-slate-300/70
-                 dark:border-slate-800 dark:bg-slate-900/80 dark:shadow-black/40"
-        >
-          <iframe
-            src="https://www.youtube.com/embed/vd9-Ayw7WNU"
-            title="Real World Ready testimonial"
-            class="w-full h-full"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+      <!-- Video testimonial -->
+      <div class="max-w-4xl mx-auto">
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl shadow-slate-300/50 dark:shadow-black/30">
+          <div class="aspect-video bg-slate-900">
+            <iframe
+              src="https://www.youtube.com/embed/vd9-Ayw7WNU"
+              title="Real World Ready testimonial"
+              class="w-full h-full"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
         </div>
-        <p class="text-xs text-slate-600 dark:text-slate-400 text-left">
-          Sai Rahul Poruri, CEO of FOSS United, shares how Real World Ready shaped the way hundreds of students
-          approached the FOSS Hack 2025 hackathon.
+        <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-4">
+          Sai Rahul Poruri, CEO of FOSS United, on how Real World Ready shaped FOSS Hack 2025.
         </p>
       </div>
     </div>
   </section>
 
   <!-- CTA *************************************** -->
-  <section
-    class="py-24 text-center bg-slate-50
-           dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800"
-  >
-    <div class="container max-w-3xl mx-auto space-y-6 px-4 sm:px-6">
-      <h2 class="text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
-        Interested in running Real World Ready with your students?
+  <section class="py-24 sm:py-32 bg-slate-950 text-white relative overflow-hidden">
+    <!-- Animated background -->
+    <div class="absolute inset-0">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/20 rounded-full blur-[150px]"></div>
+      <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="relative container max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
+        Ready to bring this to
+        <span class="bg-gradient-to-r from-violet-400 to-emerald-400 bg-clip-text text-transparent"> your students?</span>
       </h2>
-      <p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
-        Tell us a bit about your learners, your context, and the kind of movement you want to see in them. We’ll help
-        you scope the right mix of sessions and formats and see whether there’s a strong fit — whether you&apos;re a
-        college, a community, a nonprofit, or a student trying to bring this to your campus.
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10">
+        Tell us about your learners and context. We'll help you scope the right mix of sessions — whether you're a college, community, nonprofit, or a student bringing this to your campus.
       </p>
 
-      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-        <a
-          href="/contact"
-          class="inline-flex items-center justify-center rounded-xl
-                 bg-slate-900 text-slate-50 px-6 py-3 text-sm font-semibold
-                 shadow-lg shadow-blue-500/30 hover:bg-slate-800
-                 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100
-                 transition"
-        >
-          Book an inquiry call
-        </a>
-      </div>
+      <a
+        href="/contact"
+        class="group inline-flex items-center justify-center gap-2 rounded-full bg-white text-slate-900
+               px-10 py-5 text-base font-semibold shadow-2xl shadow-white/20
+               hover:bg-slate-100 transition-all duration-300 hover:scale-105"
+      >
+        Book an inquiry call
+        <Icon name="tabler:arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+      </a>
     </div>
   </section>
 </Layout>
