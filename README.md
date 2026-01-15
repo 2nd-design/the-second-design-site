@@ -176,7 +176,7 @@ site:
 metadata:
   title:
     default: 'Example'
-    template: '%s — Example'
+    template: '%s | Example'
   description: 'This is the default meta description of Example website'
   robots:
     index: true
@@ -299,4 +299,4 @@ Initially created by **Arthelokyo** and maintained by a community of [contributo
 
 ## License
 
-**AstroWind** is licensed under the MIT license — see the [LICENSE](./LICENSE.md) file for details.
+**AstroWind** is licensed under the MIT license. See the [LICENSE](./LICENSE.md) file for details.

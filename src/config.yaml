@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: The Second Design
-    template: '%s — The Second Design'
+    template: '%s | The Second Design'
   description: "Design and technology studio crafting thoughtful digital experiences."
   robots:
     index: true

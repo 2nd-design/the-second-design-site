@@ -3,7 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import { resolvedTestimonials } from '~/data/testimonials';
 
 const metadata = {
-  title: 'Testimonials Table — The Second Design',
+  title: 'Testimonials Table',
   description:
     'Flat table view of all testimonials used on The Second Design website, for internal review and curation.',
 };
@@ -73,17 +73,17 @@ const testimonials = resolvedTestimonials;
                     </td>
 
                     <td class="px-3 py-2 text-slate-800 dark:text-slate-100 whitespace-nowrap">
-                      {t.person?.name ?? '—'}
+                      {t.person?.name ?? '-'}
                     </td>
 
                     <td class="px-3 py-2 text-slate-700 dark:text-slate-200 min-w-[160px]">
                       {t.person ? (
                         <span>
-                          {t.person.designation || '—'}
+                          {t.person.designation || '-'}
                           {t.person.company && <> · {t.person.company}</>}
                         </span>
                       ) : (
-                        '—'
+                        '-'
                       )}
                     </td>
 
@@ -109,7 +109,7 @@ const testimonials = resolvedTestimonials;
                           ))}
                         </ul>
                       ) : (
-                        <span class="text-slate-400">—</span>
+                        <span class="text-slate-400">-</span>
                       )}
                     </td>
 
@@ -128,7 +128,7 @@ const testimonials = resolvedTestimonials;
                           ))}
                         </ul>
                       ) : (
-                        <span class="text-slate-400">—</span>
+                        <span class="text-slate-400">-</span>
                       )}
                     </td>
 
@@ -157,9 +157,9 @@ const testimonials = resolvedTestimonials;
 
                     <td class="px-3 py-2 whitespace-nowrap text-slate-700 dark:text-slate-200">{t.rating ?? 'null'}</td>
 
-                    <td class="px-3 py-2 whitespace-nowrap text-slate-700 dark:text-slate-200">{t.language || '—'}</td>
+                    <td class="px-3 py-2 whitespace-nowrap text-slate-700 dark:text-slate-200">{t.language || '-'}</td>
 
-                    <td class="px-3 py-2 whitespace-nowrap text-slate-700 dark:text-slate-200">{t.date || '—'}</td>
+                    <td class="px-3 py-2 whitespace-nowrap text-slate-700 dark:text-slate-200">{t.date || '-'}</td>
 
                     <td class="px-3 py-2 whitespace-nowrap text-slate-700 dark:text-slate-200">{t.priority}</td>
 
@@ -176,7 +176,7 @@ const testimonials = resolvedTestimonials;
                     </td>
 
                     <td class="px-3 py-2 min-w-[220px] text-slate-600 dark:text-slate-300">
-                      {t.internal_notes || '—'}
+                      {t.internal_notes || '-'}
                     </td>
                   </tr>
                 ))
