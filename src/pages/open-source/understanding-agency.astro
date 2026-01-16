@@ -1,0 +1,243 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { Icon } from 'astro-icon/components';
+
+const metadata = {
+  title: 'Understanding Agency - Open Source Session · The Second Design',
+  description:
+    "Open source release of The Second Design's Understanding Agency session - slide deck and participant workbook for educators and communities.",
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero ************************************* -->
+
+  <section class="relative overflow-hidden py-24 md:py-28 bg-slate-50 dark:bg-slate-950">
+    <div
+      class="pointer-events-none absolute inset-0 bg-gradient-to-b
+             from-slate-100 via-white to-slate-100
+             dark:from-slate-900 dark:via-slate-950 dark:to-violet-500/10"
+    >
+    </div>
+
+    <div class="relative container max-w-4xl mx-auto space-y-8 px-4 sm:px-6 lg:px-8">
+      <div class="space-y-3">
+        <p class="text-xs font-semibold tracking-[0.25em] text-slate-500 dark:text-slate-400 uppercase">
+          Open Source Session
+        </p>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-slate-50">
+          Understanding Agency
+        </h1>
+        <p class="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
+          A session that helps learners recognize and develop their sense of agency - the belief that their actions matter and they can shape their own outcomes.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap gap-3 text-xs text-slate-600 dark:text-slate-400">
+        <span
+          class="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 px-3 py-1"
+        >
+          <Icon name="tabler:license" class="w-3.5 h-3.5" />
+          Open for reuse with attribution
+        </span>
+        <span class="inline-flex items-center gap-1 rounded-full bg-slate-900/5 dark:bg-slate-800 px-3 py-1">
+          <Icon name="tabler:presentation" class="w-3.5 h-3.5" />
+          Slide deck + workbook
+        </span>
+        <span
+          class="inline-flex items-center gap-1 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-300 px-3 py-1"
+        >
+          <Icon name="tabler:users-group" class="w-3.5 h-3.5" />
+          Designed for cohorts & workshops
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- What the session does ************************ -->
+
+  <section class="py-20 bg-white border-y border-slate-200
+           dark:bg-slate-950/80 dark:border-slate-800">
+    <div class="container max-w-5xl mx-auto grid gap-12 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] items-start px-4 sm:px-6 lg:px-8">
+      <!-- Text -->
+      <div class="space-y-8">
+        <div class="space-y-3">
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+            Why "Understanding Agency" exists
+          </h2>
+          <p class="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+            Many learners feel like things just happen to them - that their circumstances, background, or luck determine their outcomes. This passive stance keeps them from taking initiative, making bold choices, or owning their path.
+          </p>
+          <p class="text-sm md:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+            This session helps people understand what agency really means, recognize where they already have it, and practice expanding it intentionally.
+          </p>
+        </div>
+
+        <div class="grid gap-4 md:grid-cols-2">
+          <div
+            class="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/70"
+          >
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-1.5">Core ideas it lands</h3>
+            <ul class="text-xs md:text-sm text-slate-700 dark:text-slate-300 space-y-1.5">
+              <li>• Agency is a skill, not a personality trait.</li>
+              <li>• Small actions compound into real change.</li>
+              <li>• You have more control than you think.</li>
+            </ul>
+          </div>
+
+          <div
+            class="rounded-2xl border border-slate-200 bg-slate-50/80 p-5 dark:border-slate-800 dark:bg-slate-900/70"
+          >
+            <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 mb-1.5">Where it works best</h3>
+            <ul class="text-xs md:text-sm text-slate-700 dark:text-slate-300 space-y-1.5">
+              <li>• Students starting new programs or transitions</li>
+              <li>• Cohorts feeling stuck or passive</li>
+              <li>• Anyone who needs to shift from "waiting" to "doing"</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick facts card -->
+      <div
+        class="rounded-2xl border bg-slate-50/80 border-slate-200 shadow-sm shadow-slate-200/80
+               dark:bg-slate-900/80 dark:border-slate-800/80 dark:shadow-black/40 p-6 space-y-4"
+      >
+        <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50 flex items-center gap-2">
+          <Icon name="tabler:info-circle" class="w-4 h-4" />
+          Session snapshot
+        </h3>
+        <dl class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-500 dark:text-slate-400">Format</dt>
+            <dd class="text-right">Live session + reflection exercises</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-500 dark:text-slate-400">Length</dt>
+            <dd class="text-right">~60–90 minutes (flexible)</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-500 dark:text-slate-400">Best for</dt>
+            <dd class="text-right">Groups of 20–80 learners</dd>
+          </div>
+          <div class="flex justify-between gap-4">
+            <dt class="text-slate-500 dark:text-slate-400">Prerequisites</dt>
+            <dd class="text-right">None - works for any stage</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links to materials ********************************** -->
+
+  <section class="py-24 bg-slate-50 dark:bg-slate-950">
+    <div class="container max-w-4xl mx-auto space-y-8 px-4 sm:px-6 lg:px-8">
+      <div class="space-y-3 text-center">
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+          Link to the materials
+        </h2>
+        <p class="text-sm md:text-base text-slate-700 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          These files are ready to use as-is, but you're encouraged to adapt them to your learners and context.
+          Translate, rearrange, add your own stories - just keep the attribution.
+        </p>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        <!-- Deck -->
+        <a
+          href="https://docs.google.com/presentation/d/1WWQyw2Ufq_-FbQofoCiQTq_nejilKzlaFc4cJ5-LVYw/edit"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-2xl border bg-white border-slate-200 shadow-sm shadow-slate-200/80
+                 dark:bg-slate-900/80 dark:border-slate-800/80 dark:shadow-black/40
+                 p-6 flex flex-col justify-between"
+        >
+          <div class="space-y-3">
+            <div
+              class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400"
+            >
+              <Icon name="tabler:presentation-analytics" class="w-4 h-4" />
+              Slide deck
+            </div>
+            <h3 class="text-sm md:text-base font-semibold text-slate-900 dark:text-slate-50">
+              Facilitator slide deck (Google Slides)
+            </h3>
+            <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              Slides for running the session end-to-end. Includes prompts, framing, and exercises for helping participants understand and develop their sense of agency.
+            </p>
+          </div>
+          <div class="mt-4 text-xs text-blue-600 dark:text-blue-300 font-medium flex items-center gap-1">
+            Open in Google Slides
+            <Icon name="tabler:external-link" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+          </div>
+        </a>
+
+        <!-- Workbook -->
+        <a
+          href="https://docs.google.com/document/d/16Tu6aqMHe2E55PbLVrInjDFc0vWGpQwLhdE-8mMMRaI/edit"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group rounded-2xl border bg-white border-slate-200 shadow-sm shadow-slate-200/80
+                 dark:bg-slate-900/80 dark:border-slate-800/80 dark:shadow-black/40
+                 p-6 flex flex-col justify-between"
+        >
+          <div class="space-y-3">
+            <div
+              class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400"
+            >
+              <Icon name="tabler:notebook" class="w-4 h-4" />
+              Workbook
+            </div>
+            <h3 class="text-sm md:text-base font-semibold text-slate-900 dark:text-slate-50">
+              Participant workbook (Google Doc)
+            </h3>
+            <p class="text-xs md:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+              Printable / digital workbook that guides learners through understanding agency, identifying where they have it, and making a plan to expand it.
+            </p>
+          </div>
+          <div class="mt-4 text-xs text-blue-600 dark:text-blue-300 font-medium flex items-center gap-1">
+            Open in Google Docs
+            <Icon name="tabler:external-link" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- License / attribution ************************ -->
+
+  <section class="py-20 bg-white border-t border-slate-200
+           dark:bg-slate-950/90 dark:border-slate-800">
+    <div class="container max-w-4xl mx-auto space-y-6 text-sm md:text-base px-4 sm:px-6 lg:px-8">
+      <h2 class="text-xl md:text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+        How you're allowed to use this
+      </h2>
+
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="space-y-3 text-slate-700 dark:text-slate-300">
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">You can:</h3>
+          <ul class="space-y-1.5 text-sm">
+            <li>• Run this session with your own students or community.</li>
+            <li>• Adapt, translate, and remix the material for your context.</li>
+            <li>• Include it as one component inside a larger program.</li>
+          </ul>
+        </div>
+
+        <div class="space-y-3 text-slate-700 dark:text-slate-300">
+          <h3 class="text-sm font-semibold text-slate-900 dark:text-slate-50">Please:</h3>
+          <ul class="space-y-1.5 text-sm">
+            <li>• Credit <span class="font-semibold">The Second Design</span> as the original creators.</li>
+            <li>• Link back to this page where reasonable (slides, docs, descriptions).</li>
+            <li>• Don't sell this exact material as a standalone paid product without adding your own work.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-500 dark:text-slate-400">
+        If you want a more formal license (for example, for a large institution or partner program), just reach out via
+        the contact page and we can set that up.
+      </p>
+    </div>
+  </section>
+</Layout>
